@@ -1678,7 +1678,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #613bbf;
+  background: #4d4220;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2842,7 +2842,6 @@ pre .javascript .function {
   }
 }
 .sidebar-inner {
-  background: #f3f2f3;
   font-family: Microsoft YaHei;
 }
 .header-inner {
@@ -2851,4 +2850,13 @@ pre .javascript .function {
 }
 .headband {
   background: #2d2f30;
+}
+.header-inner {
+  box-shadow: 0 2px 7px rgba(0,0,0,0.27);
+}
+.sidebar-inner {
+  box-shadow: 0 2px 7px rgba(0,0,0,0.27);
+}
+.content-wrap {
+  box-shadow: 0 2px 7px rgba(0,0,0,0.27);
 }
