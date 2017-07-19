@@ -1678,7 +1678,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffacff;
+  background: #ff46c4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2841,7 +2841,14 @@ pre .javascript .function {
     text-align: justify;
   }
 }
-.header-inner {
-  background: url("/images/sidebar-bg.png");
+.sidebar-inner {
+  background: #f3f2f3;
   font-family: Microsoft YaHei;
+}
+.header-inner {
+  background: #f3f2f3;
+  font-family: Microsoft YaHei;
+}
+.headband {
+  background: #2d2f30;
 }
