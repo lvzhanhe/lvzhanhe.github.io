@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F07%2F15%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to ! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[Hi there! It’s Zhanhe :) Welcome to my blog! This is my very first post. WelcomeWhat is it?It’s super exciting to talk to you here. This blog is powered by Hexo and use the theme - NexT.Pisces. Generally, I will share what I am learning and researching or maybe what happened in my life. How to reach me?Feel free to share your feedback or ideas with me. Here’re some ways to reach me: Comment anything you want under a post. My email: zhanhe0827@gmail.com Github: https://github.com/lvzhanhe]]></content>
       <categories>
         <category>About</category>
       </categories>
