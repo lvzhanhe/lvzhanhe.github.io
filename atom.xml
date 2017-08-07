@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-07T21:34:51.000Z</updated>
+  <updated>2017-08-07T21:45:55.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,12 @@
     <link href="http://yoursite.com/2017/08/07/Web-Crawler-in-Python/"/>
     <id>http://yoursite.com/2017/08/07/Web-Crawler-in-Python/</id>
     <published>2017-08-07T20:02:37.000Z</published>
-    <updated>2017-08-07T21:34:51.000Z</updated>
+    <updated>2017-08-07T21:45:55.000Z</updated>
     
     <content type="html"><![CDATA[<p>Search engines like Google,Bin, and Yahoo have become an irreplaceable tool of human life today. They filter information and retrieve data, helping people find what they want. However, it is not so familiar to people how search engines work. Actually, the main part of them is web Crawler (also called Spider), which is heavily used in today’s technologies. They are used to get specific information on web pages and do further operations.</p>
-<h2 id="Why-python"><a href="#Why-python" class="headerlink" title="Why python?"></a>Why python?</h2><p>As we can find, nowadays, most of web crawlers are based on Python. Lots of people may be curious about why it is Python. Actually, other languages like PHP, Java, C++, can also implement similar functions. However, Python has many advantages over them. First of all, Python has great HTTP libraries and HTML parsers. A basic one used to do this is “request”. An advanced one is “Beautiful Soup” (Mike 06), which is designed as a top of popular Python parsers like lxml. Furthermore, there are a lot of useful frameworks off the shelf. For instance, Tornado can support the I/O (input or output) from being blocked. Besides, Scrapy is a good one to build a scalable and distributed crawler. These will make developing period easier and more efficient. Therefore, it is safe to conclude that Python is a good choice for developing a web crawler.</p>
+<h2 id="Why-python"><a href="#Why-python" class="headerlink" title="Why python?"></a>Why python?</h2><p>As we can find, nowadays, most of web crawlers are based on Python. Lots of people may be curious about why it is Python. Actually, other languages like PHP, Java, C++, can also implement similar functions. However, Python has many advantages over them. First of all, Python has great HTTP libraries and HTML parsers. A basic one used to do this is “request”. An advanced one is “Beautiful Soup” (Mike 06), which is designed as a top of popular Python parsers like lxml. </p>
+<a id="more"></a>
+<p>Furthermore, there are a lot of useful frameworks off the shelf. For instance, Tornado can support the I/O (input or output) from being blocked. Besides, Scrapy is a good one to build a scalable and distributed crawler. These will make developing period easier and more efficient. Therefore, it is safe to conclude that Python is a good choice for developing a web crawler.</p>
 <h2 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works?"></a>How it works?</h2><p>The basic mechanism of web crawler is not complicated. Web crawler scan the web, reading specific data which has been set previously. It may start with some popular sites which have higher hits. Then it can spread through the internet by finding the related link within the sites. The crawler turns its finding to a giant index (Paul 05). In this giant index, it contains a great deal of data which meets requirements. A case in point, when a word “engineer” is entered in a search engine, it will check the whole index, then provide items related to “engineer”. Web crawler scan the web regularly to make sure its information is up to date. It sounds like an easy process. </p>
 <p>However, in order to acquire and then provide both accurate and reliable information, there are further steps to do (Vural 03). Web crawler should not only know what they get, but should also recognize where they get this data. It is extremely vital in practical application. For instance, a word appears in “heading” is more appropriate that which appear in “context”. For another, when one search in a video website, it will return particular information like name, singer, album. These are all related staff surrounding key words. Besides, there are always complicated algorithms based on the content of index. Essentially, these are equations to value and rate results coded by programmers. </p>
 <h2 id="How-to-make-a-crawler"><a href="#How-to-make-a-crawler" class="headerlink" title="How to make a crawler?"></a>How to make a crawler?</h2><p>A python editor and a python environment are required to encode and implement a crawler program. Basically, the module called <code>urllib</code> is used to open a link in python program and return a HTML file.( Wael 03) The argument is just like <code>page = urllib.request.urlopen(url, data, timeout)</code>. Initialing a variable for the link is recommended, since there are always further algorithms on it. The first parameter is the link, the second parameter is data need to be transported in this process, the final one is setting timeout. After that, the main task is to find useful information in that file. For example, specific data can be found by locating specific label name. The argument is like <code>start_link = page.find(“&lt;span class = ‘title’&gt;”)</code>. </p>
@@ -37,7 +39,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;Search engines like Google,Bin, and Yahoo have become an irreplaceable tool of human life today. They filter information and retrieve dat
+      &lt;p&gt;Search engines like Google,Bin, and Yahoo have become an irreplaceable tool of human life today. They filter information and retrieve data, helping people find what they want. However, it is not so familiar to people how search engines work. Actually, the main part of them is web Crawler (also called Spider), which is heavily used in today’s technologies. They are used to get specific information on web pages and do further operations.&lt;/p&gt;
+&lt;h2 id=&quot;Why-python&quot;&gt;&lt;a href=&quot;#Why-python&quot; class=&quot;headerlink&quot; title=&quot;Why python?&quot;&gt;&lt;/a&gt;Why python?&lt;/h2&gt;&lt;p&gt;As we can find, nowadays, most of web crawlers are based on Python. Lots of people may be curious about why it is Python. Actually, other languages like PHP, Java, C++, can also implement similar functions. However, Python has many advantages over them. First of all, Python has great HTTP libraries and HTML parsers. A basic one used to do this is “request”. An advanced one is “Beautiful Soup” (Mike 06), which is designed as a top of popular Python parsers like lxml. &lt;/p&gt;
     
     </summary>
     
@@ -57,10 +60,10 @@
     <link href="http://yoursite.com/2017/07/19/terminal1/"/>
     <id>http://yoursite.com/2017/07/19/terminal1/</id>
     <published>2017-07-19T04:12:31.000Z</published>
-    <updated>2017-07-25T00:15:17.000Z</updated>
+    <updated>2017-08-07T21:44:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.</p>
-<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p><code>pwd</code> is short for “print working directory”. It outputs the path of your current working directory. If you get lost, <code>pwd</code> can tell you where you are.</p>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p><code>pwd</code> is short for “print working directory”. It outputs the path of your current working directory. If you get lost, <code>pwd</code> can tell you where you are.<br><a id="more"></a></p>
 <h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>The <code>ls</code> command outputs the names of all of the folders and files in the working directory. <code>ls</code> is short for “list” (as in “list” the contents).</p>
 <p>Folder names end with a <code>/</code>, file names do not. Some terminals also add colorized output to <code>ls</code> to denote different types of files. For instance, Mimir’s terminal has folders in blue, and files in white.</p>
 <h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>The <code>cd</code> command is short for “change directory”. It allows you to change your working directory to some different folder.</p>
@@ -69,7 +72,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about 
+      &lt;p&gt;Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.&lt;/p&gt;
+&lt;h3 id=&quot;pwd&quot;&gt;&lt;a href=&quot;#pwd&quot; class=&quot;headerlink&quot; title=&quot;pwd&quot;&gt;&lt;/a&gt;pwd&lt;/h3&gt;&lt;p&gt;&lt;code&gt;pwd&lt;/code&gt; is short for “print working directory”. It outputs the path of your current working directory. If you get lost, &lt;code&gt;pwd&lt;/code&gt; can tell you where you are.&lt;br&gt;
     
     </summary>
     
