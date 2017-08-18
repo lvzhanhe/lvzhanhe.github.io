@@ -628,7 +628,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/terminal1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/terminal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhanhe Lyu">
@@ -647,7 +647,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/19/terminal1/" itemprop="url">Useful Terminal Commands (1)</a></h1>
+                <a class="post-title-link" href="/2017/07/19/terminal/" itemprop="url">Useful Terminal Commands (1)</a></h1>
         
 
         <div class="post-meta">
@@ -700,9 +700,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/07/19/terminal1/#comments" itemprop="discussionUrl">
+                <a href="/2017/07/19/terminal/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/19/terminal1/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/07/19/terminal/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -728,16 +728,43 @@
 
       
         
-          <p>Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.</p>
+          
+            <p>Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.</p>
 <h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p><code>pwd</code> is short for “print working directory”. It outputs the path of your current working directory. If you get lost, <code>pwd</code> can tell you where you are.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~ git:(master) ✗ pwd</div><div class="line">/Users/LyuZhanhe</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/19/terminal1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~ pwd</div><div class="line">/Users/LyuZhanhe</div></pre></td></tr></table></figure>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>The <code>ls</code> command outputs the names of all of the folders and files in the working directory. <code>ls</code> is short for “list” (as in “list” the contents).</p>
+<p>Folder names end with a <code>/</code>, file names do not. Some terminals also add colorized output to <code>ls</code> to denote different types of files. For instance, Mimir’s terminal has folders in blue, and files in white.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  ~ ls</div><div class="line">Applications             Music                    Public</div><div class="line">Desktop                  PhpstormProjects         Downloads</div><div class="line">Documents                Pictures                 iCloud Drive</div></pre></td></tr></table></figure>
+<p><code>ls -l -R Desktop</code>: List all the files on the desktop. <code>-l</code>, <code>-R</code> are parameters, and also can be written as <code>-IR</code>. <code>-l</code> means including details like permissions, owner, file size. <code>-R</code>means including its subdirectories. You can find more parameters <a href="http://www.rapidtables.com/code/linux/ls.htm" target="_blank" rel="external">here</a>.</p>
+<p><code>ls d**</code>: List all the files whose names begin with ‘d’.</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>The <code>cd</code> command is short for “change directory”. It allows you to change your working directory to some different folder.</p>
+<p><code>cd ../</code>: Go up one level.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  ~ cd Desktop</div><div class="line">➜  Desktop cd ../</div><div class="line">➜  ~</div></pre></td></tr></table></figure>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p><code>mkdir [dir name]</code>: Create a new directory.</p>
+<p><code>mkdir -p dir_1/dir_2</code>: ‘p’ is short for parent. If dir_1 exists in your current working directory, create dir_2 in it. If not, create dir_1, then create dir_2 in it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">➜  Desktop mkdir test</div><div class="line">➜  Desktop mkdir test/test1</div><div class="line">➜  Desktop cd test</div><div class="line">➜  test ls</div><div class="line">test1</div></pre></td></tr></table></figure>
+<p><code>mkdir -m 777 dir_3</code>: Create a directory named ‘dir_3’. It can be read, write and execute by any user.</p>
+<p><code>mkdir -m [xxx] dir_4</code>: The first digit represents the owner, the second represents the group and the third represents other users. The number 7 represents all three types of permission (i.e., read, write and execute), 6 stands for read and write only, 5 is read and execute, 4 is read only, 3 is write and execute, 2 is write only, 1 is execute only and 0 is no permission.</p>
+<p><code>mkdir -v dir_5</code>: Create a new directory. Also explain what it has done in the terminal, e.g. ‘mkdir: created directory ‘test3’’.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  test mkdir -m 343 test2</div><div class="line">➜  test mkdir -v test3</div><div class="line">mkdir: created directory &apos;test3&apos;</div></pre></td></tr></table></figure>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p><code>rm [file name]</code>: Delete a file. You will be asked to confirm the operation.</p>
+<p><code>rm -f [file name]</code>: Forcibly delete the file, the system no longer prompt.</p>
+<p><code>rm *.log</code>: Delete all .log files, delete one by one before asking to confirm.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">➜  test ls</div><div class="line">README.md  README1.md README2.md README3.md test1      test2      test3</div><div class="line">➜  test rm README.md</div><div class="line">➜  test ls</div><div class="line">README1.md README2.md README3.md test1      test2      test3</div><div class="line">➜  test rm -f README1.md</div><div class="line">➜  test ls</div><div class="line">README2.md README3.md test1      test2      test3</div><div class="line">➜  test rm *.md</div><div class="line">➜  test ls</div><div class="line">test1 test2 test3</div></pre></td></tr></table></figure>
+<h3 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h3><p><code>rmdir [dirname]</code>: Remove directory (only operates on empty directories).</p>
+<p><code>rmdir -p [dirname]</code>: When the subdirectory is deleted so that its parent has become an empty directory, then also delete the parent.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">➜  test rmdir test1</div><div class="line">rmdir: test1: Directory not empty</div><div class="line">➜  test rmdir test2</div><div class="line">➜  test ls</div><div class="line">test1 test3</div><div class="line">➜  test rmdir -p test3/test4</div><div class="line">➜  test ls</div><div class="line">test1</div></pre></td></tr></table></figure>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p><code>mv [file] [new filename]</code>: Rename a file.</p>
+<p><code>mv [file] [dirname]</code>: Move a source file to a directory.</p>
+<p><code>mv [file1] [file2] [dirname]</code>: Move a few files to a same directory.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">➜  test git:(master) ✗ ls -R</div><div class="line">test1 test2</div><div class="line"></div><div class="line">./test1:</div><div class="line">README.md  README1.md README2.md</div><div class="line"></div><div class="line">./test2:</div><div class="line">➜  test cd test1</div><div class="line">➜  test1 mv README.md README1.md README2.md ../test2</div><div class="line">➜  test1 cd ../</div><div class="line">➜  test ls -R</div><div class="line">test1 test2</div><div class="line"></div><div class="line">./test1:</div><div class="line"></div><div class="line">./test2:</div><div class="line">README.md  README1.md README2.md</div></pre></td></tr></table></figure>
+<p><code>mv -i [file1] [file2]</code>: Rename file1 to file2. If file2 doesn’t exist, prompt before overwriting.</p>
+<p><code>mv -f [file1] [file2]</code>: Rename file1 to file2. Do not prompt before overwriting existing files. Please be careful when using it.</p>
+<p><code>mv [dir1] [dir2]</code>: Move dir1 to dir2. If dir2 doesn’t exist, rename dir1 to dir2.</p>
+<p><code>mv * ../</code>: Move all files under the current folder to the parent directory.</p>
+<p><code>mv [dir1]/* [dir2]</code>: Move the files in dir1 to dir2.</p>
+
+          
         
       
     </div>
