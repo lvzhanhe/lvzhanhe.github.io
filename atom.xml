@@ -57,14 +57,15 @@
   
   <entry>
     <title>Basic Unix Commands (1)</title>
-    <link href="http://yoursite.com/2017/07/19/terminal/"/>
-    <id>http://yoursite.com/2017/07/19/terminal/</id>
+    <link href="http://yoursite.com/2017/07/19/command1/"/>
+    <id>http://yoursite.com/2017/07/19/command1/</id>
     <published>2017-07-19T04:12:31.000Z</published>
-    <updated>2017-08-18T19:48:58.000Z</updated>
+    <updated>2017-08-18T19:51:52.000Z</updated>
     
     <content type="html"><![CDATA[<p>Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.</p>
 <h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p><code>pwd</code> is short for “print working directory”. It outputs the path of your current working directory. If you get lost, <code>pwd</code> can tell you where you are.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~ pwd</div><div class="line">/Users/LyuZhanhe</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>The <code>ls</code> command outputs the names of all of the folders and files in the working directory. <code>ls</code> is short for “list” (as in “list” the contents).</p>
 <p>Folder names end with a <code>/</code>, file names do not. Some terminals also add colorized output to <code>ls</code> to denote different types of files. For instance, Mimir’s terminal has folders in blue, and files in white.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  ~ ls</div><div class="line">Applications             Music                    Public</div><div class="line">Desktop                  PhpstormProjects         Downloads</div><div class="line">Documents                Pictures                 iCloud Drive</div></pre></td></tr></table></figure>
@@ -100,7 +101,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about 
+      &lt;p&gt;Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.&lt;/p&gt;
+&lt;h3 id=&quot;pwd&quot;&gt;&lt;a href=&quot;#pwd&quot; class=&quot;headerlink&quot; title=&quot;pwd&quot;&gt;&lt;/a&gt;pwd&lt;/h3&gt;&lt;p&gt;&lt;code&gt;pwd&lt;/code&gt; is short for “print working directory”. It outputs the path of your current working directory. If you get lost, &lt;code&gt;pwd&lt;/code&gt; can tell you where you are.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;➜  ~ pwd&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/Users/LyuZhanhe&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
