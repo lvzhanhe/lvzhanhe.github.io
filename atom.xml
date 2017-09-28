@@ -48,6 +48,54 @@
   </entry>
   
   <entry>
+    <title>Basic Unix Commands (2)</title>
+    <link href="http://yoursite.com/2017/08/31/command2/"/>
+    <id>http://yoursite.com/2017/08/31/command2/</id>
+    <published>2017-08-31T19:12:36.000Z</published>
+    <updated>2017-09-28T22:04:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p><code>cp [file] [dirname]</code>: Copy a single file to a target directory. If the file has been existed in the directory, you will be asked to confirm the replacement.</p>
+<p><code>cp -a [file] [dirname]</code>: The parameter <code>-a</code> </p>
+<a id="more"></a>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p><code>touch [file]</code>: Create a file.</p>
+<p><code>touch [file1] [file2]</code>: Create files.</p>
+<p><code>touch -t 201211234343.90 [file]</code>: Create a file and set its timestamp.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  ~ touch -t 201211234343.90 log1.log</div><div class="line">➜  ~ ll *.log</div><div class="line">-rw-r--r--  1 lyuZhanhe  staff     0B Nov 24  2012 log1.log</div></pre></td></tr></table></figure>
+<p><code>touch -r [file1] [file2]</code>: Update the timestemp of file1 to the same as file2.</p>
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>It is used to display the content of a file or link several files together or create new one. However, it cannot edit existing files.</p>
+<p><code>cat [file]</code>: Display the content of a file. If you specify more than one file name, <code>cat</code> will display those files one after the other.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  Desktop cat hello.md</div><div class="line">hello world!%</div></pre></td></tr></table></figure>
+<p><code>cat -n [file]</code>: Number all the output lines .</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  Desktop cat -n h1.md</div><div class="line">     1	line 1</div><div class="line">     2	line 2</div><div class="line">     3	lin3 3%</div></pre></td></tr></table></figure>
+<p><code>cat [file1] &gt; [file2]</code>: Copy the content in <code>[file1]</code> to <code>[file2]</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  Desktop cat h1.md &gt; h2.md</div></pre></td></tr></table></figure>
+<p><code>cat [file1] &gt;&gt; [file2]</code>: Append the content in <code>[file1]</code> to <code>[file2]</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  Desktop cat h1.md &gt;&gt; h2.md</div></pre></td></tr></table></figure>
+<p>An example:</p>
+<p>We use <code>cat</code> to catenate output text to the file’s contents.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">➜  Desktop echo &quot;My Classes:&quot; | cat - list.txt</div><div class="line">My Classes:</div><div class="line">math</div><div class="line">biology</div><div class="line">physics</div></pre></td></tr></table></figure>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p><code>find ~ -name &quot;*.log&quot; -print</code>: Find all the .log files in the root directory and print the result.</p>
+<p><code>find . -name &quot;*.log&quot; -print</code>: Find all the .log files in the current directory and print the result.</p>
+<p><code>find -atime -[n]</code>: Find all the files which have been accessed in n days.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;cp&quot;&gt;&lt;a href=&quot;#cp&quot; class=&quot;headerlink&quot; title=&quot;cp&quot;&gt;&lt;/a&gt;cp&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cp [file] [dirname]&lt;/code&gt;: Copy a single file to a target directory. If the file has been existed in the directory, you will be asked to confirm the replacement.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cp -a [file] [dirname]&lt;/code&gt;: The parameter &lt;code&gt;-a&lt;/code&gt; &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Terminal" scheme="http://yoursite.com/categories/Terminal/"/>
+    
+    
+      <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Web Crawler in Python</title>
     <link href="http://yoursite.com/2017/08/07/Web-Crawler-in-Python/"/>
     <id>http://yoursite.com/2017/08/07/Web-Crawler-in-Python/</id>
