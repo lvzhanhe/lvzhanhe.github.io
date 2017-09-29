@@ -52,10 +52,10 @@
     <link href="http://yoursite.com/2017/08/31/command2/"/>
     <id>http://yoursite.com/2017/08/31/command2/</id>
     <published>2017-08-31T19:12:36.000Z</published>
-    <updated>2017-09-28T22:04:58.000Z</updated>
+    <updated>2017-09-29T00:19:59.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p><code>cp [file] [dirname]</code>: Copy a single file to a target directory. If the file has been existed in the directory, you will be asked to confirm the replacement.</p>
-<p><code>cp -a [file] [dirname]</code>: The parameter <code>-a</code> </p>
+<p><code>cp -a [file] [dirname]</code>: The parameter <code>-a</code> and preserve the specified attributes.</p>
 <a id="more"></a>
 <h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p><code>touch [file]</code>: Create a file.</p>
 <p><code>touch [file1] [file2]</code>: Create files.</p>
@@ -82,7 +82,7 @@
     <summary type="html">
     
       &lt;h3 id=&quot;cp&quot;&gt;&lt;a href=&quot;#cp&quot; class=&quot;headerlink&quot; title=&quot;cp&quot;&gt;&lt;/a&gt;cp&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cp [file] [dirname]&lt;/code&gt;: Copy a single file to a target directory. If the file has been existed in the directory, you will be asked to confirm the replacement.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;cp -a [file] [dirname]&lt;/code&gt;: The parameter &lt;code&gt;-a&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cp -a [file] [dirname]&lt;/code&gt;: The parameter &lt;code&gt;-a&lt;/code&gt; and preserve the specified attributes.&lt;/p&gt;
     
     </summary>
     
