@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[How to turn up system volume during a FaceTime call]]></title>
+    <url>%2F2017%2F09%2F30%2Ffacetime%2F</url>
+    <content type="text"><![CDATA[People who are using Mac OS may find that system volume is extremely low during a FaceTime call. It dulls every other sound. Here are two esay steps to solve this problem. Step 1Open FaceTime and do step 2 before you make a call. Step 2Launch the terminal and enter the command below: 1➜ ~ printf &quot;p *(char*)(void(*)())AudioDeviceDuck=0xc3\nq&quot; | lldb -n FaceTime The same as other applications. Just replace FaceTime with your application name!]]></content>
+      <categories>
+        <category>Terminal</category>
+      </categories>
+      <tags>
+        <tag>Terminal</tag>
+        <tag>Unix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2 Easy Steps to Extract .rar Files]]></title>
     <url>%2F2017%2F09%2F02%2Funrar%2F</url>
     <content type="text"><![CDATA[We always need to extract .rar files in order to get the stuff inside. However, unlike .zip files, macOS and OS X does not include a built-in archive utility tool that opens .rar files. So, here is a good and convenient way for you. Step 1Install unrar by using Homebrew. (Infos about Homebrew can be found here) 1➜ ~ brew install unrar Step 2Go to the directory where you save the .rar file. Then type the command below.1➜ ~ unrar x [filename.rar] Then you’ll get what you want!]]></content>
