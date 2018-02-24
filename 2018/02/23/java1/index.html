@@ -82,8 +82,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Zhanhe's BLOG" type="application/atom+xml" />
 
@@ -101,10 +99,10 @@
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Cheat Sheet (1)">
-<meta property="og:url" content="http://yoursite.com/2018/02/23/cs300/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/02/23/java1/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
 <meta property="og:description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
-<meta property="og:updated_time" content="2018-02-24T04:54:43.155Z">
+<meta property="og:updated_time" content="2018-02-24T23:05:57.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Cheat Sheet (1)">
 <meta name="twitter:description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
@@ -135,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/23/cs300/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/23/java1/"/>
 
 
 
@@ -480,7 +478,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/cs300/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/java1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhanhe Lyu">
@@ -550,9 +548,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/23/cs300/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/23/java1/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/02/23/cs300/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/23/java1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -604,12 +602,39 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DriveTime timeRoute1 = <span class="keyword">new</span> DriveTime();</div><div class="line">DriveTime timeRoute2;</div><div class="line">DriveTime bestRoute;</div><div class="line"></div><div class="line">timeRoute2 = <span class="keyword">new</span> DriveTime();</div><div class="line">bestRoute = timeRoute1;</div></pre></td></tr></table></figure>
 <h3 id="Primitive-and-reference-types"><a href="#Primitive-and-reference-types" class="headerlink" title="Primitive and reference types"></a>Primitive and reference types</h3><p>Java variables are one of two types:</p>
 <ul>
-<li>A <strong>primitive type</strong> variable directly stores the data for that variable type, such as int, double, or char.</li>
-<li>A <strong>reference type</strong> variable can refer to an object.</li>
+<li>A <strong>primitive type</strong> variable directly stores the data for that variable type, such as int, double, or char. <code>int num = 20;</code></li>
+<li>A <strong>reference type</strong> variable refers to an object. <code>Integer num = 10;</code></li>
 </ul>
-<p><strong>Primitive wrapper classes</strong> that are built-in reference types that augment the primitive types.</p>
+<p><strong>Primitive wrapper classes</strong> are built-in reference types that augment the primitive types.</p>
+<p>Two ways to initialize primitive wrapper class:</p>
+<ul>
+<li>Object initialization style: <code>Integer num = new Integer(81);</code></li>
+<li><code>Double num = 0.0;</code></li>
+</ul>
 <p>A new memory allocation occurs every time a new value is assigned to an Integer variable, and the previous memory location to which the variable referred, remains <em>unmodified</em>.</p>
-<p>A primitive wrapper object (as well as a String object) is <strong>immutable</strong>. That means a programmer cannot change the object via methods or variable assignments after object creation. For instance, <code>Number = 28;</code> does not change the value in Number’s object. Instead, the assignment allocates a new Integer object with value 28, returns a reference to that new object, and assigns the reference to variable Number. The original Integer object is unchanged.</p>
+<p>A primitive wrapper object (as well as a String object) is <strong>immutable</strong>. That means a programmer cannot change the object via methods or variable assignments after object creation. For instance, <code>Number = 28;</code> does not change the value in Number’s object. Instead, the assignment allocates a new Integer object with value 28, returns a reference to that new object, and assigns the reference to variable Number. The original Integer object remains unchanged.</p>
+<p>Using the <strong>equality operators</strong> on two reference variables will evaluate whether each operand refer to a same object. However, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code> compare values of objects.</p>
+<p>Use <code>equals()</code> (return boolean) and <code>compareTo()</code> (return a number) methods for primitive wrapper types.</p>
+<p>The Integer, Double, and Long primitive wrapper classes provide methods for <strong>converting</strong> objects to primitive types: <code>num.intValue()</code>, <code>num.doubleValue()</code>, <code>num.longValue()</code>, <code>c.charValue()</code>, <code>b.booleanValue()</code>.</p>
+<p><strong>Strings and numeral systems:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">num.toString()</div><div class="line">Integer.toString(num) <span class="comment">// static method, don't need to create an object</span></div><div class="line">Integer.parseInt(str) <span class="comment">// Returns int value</span></div><div class="line">Integer.valueOf(str)  <span class="comment">// Returns Integer object</span></div><div class="line">Integer.toBinaryString(num1) <span class="comment">// e.g. returns "1001"</span></div></pre></td></tr></table></figure>
+<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><p>An ArrayList is an ordered list of <em>reference type</em> items.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line">ArrayList&lt;String&gt; studentNames = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div></pre></td></tr></table></figure>
+<p>Several ArrayList methods：</p>
+<ul>
+<li><code>add(element)</code></li>
+<li><code>get(index)</code></li>
+<li><code>set(index, element)</code></li>
+</ul>
+<p>An ArrayList’s index must be an <strong>integer type</strong> but not a floating-point type, even if 1.0, 2.0 etc.</p>
+<h3 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h3><p>Doing insertions/removes on large ArrayLists can take a very long time.</p>
+<p>Appending a new item to the end of a 100 element ArrayList requires <strong>0</strong> elements to be shifted.</p>
+<p>Inserting a new item at the beginning of a 100 element ArrayList requires <strong>100</strong> elements to be shifted.</p>
+<ul>
+<li>Static memory: static fields which are allocated once and last for the whole duration of a program’s execution with their addresses being unchanged.</li>
+<li>The stack (<em>automatic memory</em>): A method call adds local variables to the stack, and a return removes them.</li>
+<li>The heap (<em>free store</em>): It’s where <code>new</code> operator allocates memory for objects.</li>
+</ul>
 
       
     </div>
@@ -830,7 +855,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computer-program"><span class="nav-number">1.</span> <span class="nav-text">Computer program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner"><span class="nav-number">2.</span> <span class="nav-text">Scanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">3.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primitive-and-reference-types"><span class="nav-number">4.</span> <span class="nav-text">Primitive and reference types</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computer-program"><span class="nav-number">1.</span> <span class="nav-text">Computer program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner"><span class="nav-number">2.</span> <span class="nav-text">Scanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">3.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primitive-and-reference-types"><span class="nav-number">4.</span> <span class="nav-text">Primitive and reference types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">5.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memory"><span class="nav-number">6.</span> <span class="nav-text">Memory</span></a></li></ol></div>
             
 
           </div>
@@ -994,8 +1019,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/02/23/cs300/';
-          this.page.identifier = '2018/02/23/cs300/';
+          this.page.url = 'http://yoursite.com/2018/02/23/java1/';
+          this.page.identifier = '2018/02/23/java1/';
           this.page.title = 'Java Cheat Sheet (1)';
         };
         var d = document, s = d.createElement('script');
