@@ -82,6 +82,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="Zhanhe's BLOG" type="application/atom+xml" />
 
@@ -95,17 +97,17 @@
 
 
 
-<meta name="description" content="To be a better man.">
+<meta name="description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Cheat Sheet (1)">
 <meta property="og:url" content="http://yoursite.com/2018/02/23/cs300/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
-<meta property="og:description" content="To be a better man.">
-<meta property="og:updated_time" content="2018-02-24T02:34:35.024Z">
+<meta property="og:description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
+<meta property="og:updated_time" content="2018-02-24T04:54:43.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Cheat Sheet (1)">
-<meta name="twitter:description" content="To be a better man.">
+<meta name="twitter:description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
 
 
 
@@ -580,7 +582,35 @@
       
 
       
-        
+        <h3 id="Computer-program"><a href="#Computer-program" class="headerlink" title="Computer program"></a>Computer program</h3><p>A computer program consists of instructions (aka statements) executing <em>one</em> at a time. Basic <em>instruction</em> types are <strong>input</strong>, <strong>process</strong>,<strong>output</strong>.</p>
+<p>A sequence of instructions that solves a problem is called an <strong>algorithm</strong>.</p>
+<p>In a program, the cause of a problem is called a <strong>bug</strong>, and troubleshooting is called <strong>debugging</strong>.</p>
+<a id="more"></a>
+<p>Debugging methods:</p>
+<ul>
+<li><em>Visual inspection</em></li>
+<li><em>Inserting debug output statements</em></li>
+<li><em>Hierarchical debugging</em> (divide code into several parts)</li>
+</ul>
+<h3 id="Scanner"><a href="#Scanner" class="headerlink" title="Scanner"></a>Scanner</h3><p>If a method needs to read user input, a good practice is to create a single Scanner object in <code>main()</code> and pass that Scanner object to the method. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readWord</span><span class="params">(Scanner scnr)</span> </span>&#123;</div><div class="line">   String word = scnr.next();</div><div class="line">   <span class="comment">// Do something with the word</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">   readWord(scnr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>In the following case, input <code>8 9</code>, sum will not always be <code>17</code> because the first input may read input than needed:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">    </div><div class="line">   <span class="keyword">return</span> scnr.nextInt();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> sum = readInt() + readInt();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>In a program, an <strong>object</strong> consists of some <em>internal data items</em> plus <em>operations</em> that can be performed on that data.</p>
+<p>A reference refers to an object and may be thought of as storing the memory address of an object. Variables of a class data type (and array types) are <em>reference variables</em>.</p>
+<p>The <code>new</code> operator allocates memory for an object, then returns a reference to the object’s location in memory.</p>
+<p>A statement like <code>TimeHrMin travelTime;</code> declares a reference to an object of type TimeHrMin but not yet refer to a valid object.</p>
+<p>In the following case, variables timeRoute1 and timeRoute2 both refer to valid objects and variables timeRoute1 and bestRoute refer to the same object.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DriveTime timeRoute1 = <span class="keyword">new</span> DriveTime();</div><div class="line">DriveTime timeRoute2;</div><div class="line">DriveTime bestRoute;</div><div class="line"></div><div class="line">timeRoute2 = <span class="keyword">new</span> DriveTime();</div><div class="line">bestRoute = timeRoute1;</div></pre></td></tr></table></figure>
+<h3 id="Primitive-and-reference-types"><a href="#Primitive-and-reference-types" class="headerlink" title="Primitive and reference types"></a>Primitive and reference types</h3><p>Java variables are one of two types:</p>
+<ul>
+<li>A <strong>primitive type</strong> variable directly stores the data for that variable type, such as int, double, or char.</li>
+<li>A <strong>reference type</strong> variable can refer to an object.</li>
+</ul>
+<p><strong>Primitive wrapper classes</strong> that are built-in reference types that augment the primitive types.</p>
+<p>A new memory allocation occurs every time a new value is assigned to an Integer variable, and the previous memory location to which the variable referred, remains <em>unmodified</em>.</p>
+<p>A primitive wrapper object (as well as a String object) is <strong>immutable</strong>. That means a programmer cannot change the object via methods or variable assignments after object creation. For instance, <code>Number = 28;</code> does not change the value in Number’s object. Instead, the assignment allocates a new Integer object with value 28, returns a reference to that new object, and assigns the reference to variable Number. The original Integer object is unchanged.</p>
+
       
     </div>
 
@@ -691,8 +721,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -781,6 +820,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computer-program"><span class="nav-number">1.</span> <span class="nav-text">Computer program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner"><span class="nav-number">2.</span> <span class="nav-text">Scanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">3.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primitive-and-reference-types"><span class="nav-number">4.</span> <span class="nav-text">Primitive and reference types</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
