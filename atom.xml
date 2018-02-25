@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-25T06:11:08.648Z</updated>
+  <updated>2018-02-25T06:12:47.836Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yoursite.com/2018/02/23/java1/"/>
     <id>http://yoursite.com/2018/02/23/java1/</id>
     <published>2018-02-24T02:29:04.614Z</published>
-    <updated>2018-02-25T06:11:08.648Z</updated>
+    <updated>2018-02-25T06:12:47.836Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>Some parts are paraphrased from <a href="zybooks.com">zyBooks</a> whose copywrite belongs to the original writer. </p>
+<p>Some parts are paraphrased from <a href="http://www.zybooks.com/" target="_blank" rel="external">zyBooks</a> whose copywrite belongs to the original writer. </p>
 </blockquote>
 <h3 id="Computer-program"><a href="#Computer-program" class="headerlink" title="Computer program"></a>Computer program</h3><p>A computer program consists of instructions (aka statements) executing <em>one</em> at a time. Basic <em>instruction</em> types are <strong>input</strong>, <strong>process</strong>,<strong>output</strong>.</p>
 <p>A sequence of instructions that solves a problem is called an <strong>algorithm</strong>.</p>
@@ -112,7 +112,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;Some parts are paraphrased from &lt;a href=&quot;zybooks.com&quot;&gt;zyBooks&lt;/a&gt; whose copywrite belongs to the original writer. &lt;/p&gt;
+&lt;p&gt;Some parts are paraphrased from &lt;a href=&quot;http://www.zybooks.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zyBooks&lt;/a&gt; whose copywrite belongs to the original writer. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;Computer-program&quot;&gt;&lt;a href=&quot;#Computer-program&quot; class=&quot;headerlink&quot; title=&quot;Computer program&quot;&gt;&lt;/a&gt;Computer program&lt;/h3&gt;&lt;p&gt;A computer program consists of instructions (aka statements) executing &lt;em&gt;one&lt;/em&gt; at a time. Basic &lt;em&gt;instruction&lt;/em&gt; types are &lt;strong&gt;input&lt;/strong&gt;, &lt;strong&gt;process&lt;/strong&gt;,&lt;strong&gt;output&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;A sequence of instructions that solves a problem is called an &lt;strong&gt;algorithm&lt;/strong&gt;.&lt;/p&gt;
