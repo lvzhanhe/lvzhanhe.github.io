@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
+<meta name="description" content="Some parts are paraphrased from zyBooks whose copywrite belongs to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic i">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Cheat Sheet (1)">
 <meta property="og:url" content="http://yoursite.com/2018/02/23/java1/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
-<meta property="og:description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
-<meta property="og:updated_time" content="2018-02-24T23:05:57.916Z">
+<meta property="og:description" content="Some parts are paraphrased from zyBooks whose copywrite belongs to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic i">
+<meta property="og:updated_time" content="2018-02-25T06:11:08.648Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Cheat Sheet (1)">
-<meta name="twitter:description" content="Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic instruction types are input, process,output. A sequence of instructions that solves a proble">
+<meta name="twitter:description" content="Some parts are paraphrased from zyBooks whose copywrite belongs to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic i">
 
 
 
@@ -580,7 +580,10 @@
       
 
       
-        <h3 id="Computer-program"><a href="#Computer-program" class="headerlink" title="Computer program"></a>Computer program</h3><p>A computer program consists of instructions (aka statements) executing <em>one</em> at a time. Basic <em>instruction</em> types are <strong>input</strong>, <strong>process</strong>,<strong>output</strong>.</p>
+        <blockquote>
+<p>Some parts are paraphrased from <a href="zybooks.com">zyBooks</a> whose copywrite belongs to the original writer. </p>
+</blockquote>
+<h3 id="Computer-program"><a href="#Computer-program" class="headerlink" title="Computer program"></a>Computer program</h3><p>A computer program consists of instructions (aka statements) executing <em>one</em> at a time. Basic <em>instruction</em> types are <strong>input</strong>, <strong>process</strong>,<strong>output</strong>.</p>
 <p>A sequence of instructions that solves a problem is called an <strong>algorithm</strong>.</p>
 <p>In a program, the cause of a problem is called a <strong>bug</strong>, and troubleshooting is called <strong>debugging</strong>.</p>
 <a id="more"></a>
@@ -622,11 +625,16 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ArrayList;</div><div class="line">ArrayList&lt;String&gt; studentNames = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div></pre></td></tr></table></figure>
 <p>Several ArrayList methods：</p>
 <ul>
-<li><code>add(element)</code></li>
+<li><code>add(element)</code> or <code>add(index element)</code></li>
 <li><code>get(index)</code></li>
-<li><code>set(index, element)</code></li>
+<li><code>set(index, element)</code> A position should already have a value before <code>set</code>.</li>
+<li><code>remove(index)</code></li>
+<li><code>size()</code></li>
+<li><code>isEmpty()</code></li>
+<li><code>clear()</code> After <code>arrayList.clear()</code>, <code>arrayList.get(0)</code> is an invalid access.</li>
 </ul>
 <p>An ArrayList’s index must be an <strong>integer type</strong> but not a floating-point type, even if 1.0, 2.0 etc.</p>
+<p>We can utilize <strong>method chaining</strong> to make code more readable</p>
 <h3 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h3><p>Doing insertions/removes on large ArrayLists can take a very long time.</p>
 <p>Appending a new item to the end of a 100 element ArrayList requires <strong>0</strong> elements to be shifted.</p>
 <p>Inserting a new item at the beginning of a 100 element ArrayList requires <strong>100</strong> elements to be shifted.</p>
@@ -634,6 +642,28 @@
 <li>Static memory: static fields which are allocated once and last for the whole duration of a program’s execution with their addresses being unchanged.</li>
 <li>The stack (<em>automatic memory</em>): A method call adds local variables to the stack, and a return removes them.</li>
 <li>The heap (<em>free store</em>): It’s where <code>new</code> operator allocates memory for objects.</li>
+</ul>
+<p>The Java virtual machine keeps a count, known as a <strong>reference count</strong>, of all reference variables that are currently referring to an object. If the reference count is zero which means that no variables in the program refer to the object right now, then the object is considered as an <strong>unreachable object</strong>. So it is eligible for <strong>garbage collection</strong>. </p>
+<h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><p>Since <code>main()</code> is a static method, it does not have direct access to the class’ instance members. Instead, it should create an object first.</p>
+<p><strong>Member access operator</strong>: operator <code>.</code></p>
+<p><strong>Mutator</strong>: setter</p>
+<p><strong>Accessor</strong>: getter, which should not modify private data.</p>
+<p>A private helper method typically helps public methods carry out their tasks thus cannot be called from <code>main()</code>.</p>
+<p>A class creator can <strong>overload</strong> a constructor by defining multiple constructors differing in parameter types.</p>
+<p><code>this</code> can also be used in a constructor to invoke a different (overloaded) constructor.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">className</span><span class="params">()</span> </span>&#123;</div><div class="line">   <span class="keyword">this</span>(<span class="number">1</span>, <span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>In general, many programmers recommend only printing the fails when testing a class.</p>
+<p>A programmer don’t need to test all possible values when testing a class because it’s impossible.</p>
+<p>Running an existing class whenever code is changed is known as <strong>regression testing</strong>. We do this because the change may cause other problems which didn’t happen before.</p>
+<h3 id="Abstract-data-types-ADT"><a href="#Abstract-data-types-ADT" class="headerlink" title="Abstract data types (ADT)"></a>Abstract data types (ADT)</h3><p><strong>Encapsulation</strong>: information hiding</p>
+<p>The <em>String</em> and <em>ArrayList</em> are examples of ADTs. Since they are part of the Java Class library, programmers do not to access the actual Java code in order to use it. Instead, they typically rely on other information describing an ADT’s public member method signatures.</p>
+<h3 id="Java-doc"><a href="#Java-doc" class="headerlink" title="Java doc"></a>Java doc</h3><p>The <strong>Javadoc</strong> tool parses source code and specially formatted comments to generate <strong>API</strong>.</p>
+<ul>
+<li><code>@author</code>: the author of the whole class</li>
+<li><code>@version</code>: the version number of the class</li>
+<li><code>@param</code>: params of a method</li>
+<li><code>@return</code>: returned value or object of a method</li>
+<li><code>@see</code>: reference to orther source</li>
 </ul>
 
       
@@ -855,7 +885,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computer-program"><span class="nav-number">1.</span> <span class="nav-text">Computer program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner"><span class="nav-number">2.</span> <span class="nav-text">Scanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">3.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primitive-and-reference-types"><span class="nav-number">4.</span> <span class="nav-text">Primitive and reference types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">5.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memory"><span class="nav-number">6.</span> <span class="nav-text">Memory</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Computer-program"><span class="nav-number">1.</span> <span class="nav-text">Computer program</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner"><span class="nav-number">2.</span> <span class="nav-text">Scanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects"><span class="nav-number">3.</span> <span class="nav-text">Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primitive-and-reference-types"><span class="nav-number">4.</span> <span class="nav-text">Primitive and reference types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">5.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Memory"><span class="nav-number">6.</span> <span class="nav-text">Memory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Class"><span class="nav-number">7.</span> <span class="nav-text">Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Abstract-data-types-ADT"><span class="nav-number">8.</span> <span class="nav-text">Abstract data types (ADT)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-doc"><span class="nav-number">9.</span> <span class="nav-text">Java doc</span></a></li></ol></div>
             
 
           </div>
