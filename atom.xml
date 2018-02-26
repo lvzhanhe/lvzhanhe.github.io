@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-26T04:22:29.110Z</updated>
+  <updated>2018-02-26T20:06:21.580Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/02/23/java1/"/>
     <id>http://yoursite.com/2018/02/23/java1/</id>
     <published>2018-02-24T02:29:04.614Z</published>
-    <updated>2018-02-26T04:22:29.110Z</updated>
+    <updated>2018-02-26T20:06:21.580Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Some parts are paraphrased from <a href="http://www.zybooks.com/" target="_blank" rel="external">zyBooks</a> whose copywrite belong to the original writer. </p>
@@ -39,7 +39,8 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readWord</span><span class="params">(Scanner scnr)</span> </span>&#123;</div><div class="line">   String word = scnr.next();</div><div class="line">   <span class="comment">// Do something with the word</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">   readWord(scnr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>In the following case, input <code>8 9</code>, sum will not always be <code>17</code> because the first input may read input than needed:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">    </div><div class="line">   <span class="keyword">return</span> scnr.nextInt();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> sum = readInt() + readInt();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>In a program, an <strong>object</strong> consists of some <em>internal data items</em> plus <em>operations</em> that can be performed on that data.</p>
+<h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>Principles of Object-Oriented Programing: abstraction, encapsulation, modularity.</p>
+<p>In a program, an <strong>object</strong> consists of some <em>internal data items</em> plus <em>operations</em> that can be performed on that data.</p>
 <p>A reference refers to an object and may be thought of as storing the memory address of an object. Variables of a class data type (and array types) are <em>reference variables</em>.</p>
 <p>The <code>new</code> operator allocates memory for an object, then returns a reference to the object’s location in memory.</p>
 <p>A statement like <code>TimeHrMin travelTime;</code> declares a reference to an object of type TimeHrMin but not yet refer to a valid object.</p>
@@ -87,6 +88,18 @@
 <li>The heap (<em>free store</em>): It’s where <code>new</code> operator allocates memory for objects.</li>
 </ul>
 <p>The Java virtual machine keeps a count, known as a <strong>reference count</strong>, of all reference variables that are currently referring to an object. If the reference count is zero which means that no variables in the program refer to the object right now, then the object is considered as an <strong>unreachable object</strong>. So it is eligible for <strong>garbage collection</strong>. </p>
+<p>Anything in the heap:</p>
+<ul>
+<li>When we run out of references to the object, then it can be garbage collected.</li>
+</ul>
+<p>Anything in the stack:</p>
+<ul>
+<li>When they go out of scope.</li>
+</ul>
+<p>Static field in a class:</p>
+<ul>
+<li>These will be in scope throughout your program.</li>
+</ul>
 <h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><p>Since <code>main()</code> is a static method, it does not have direct access to the class’ instance members. Instead, it should create an object first.</p>
 <p><strong>Member access operator</strong>: operator <code>.</code></p>
 <p><strong>Mutator</strong>: setter</p>
@@ -108,7 +121,9 @@
 <li><code>@return</code>: returned value or object of a method</li>
 <li><code>@see</code>: reference to orther source</li>
 </ul>
-<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks.</p>
+<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><code>throws</code> Warning keyword. Goes in a method header. <code>public int myMethod throws NumberFormat Exception {</code> Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception ot also throws a new one.</p>
+<p><code>throw new</code> <code>throw new NumberFormatException();</code> Can use this to force code to crash rather than giving wrong answers.</p>
+<p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks.</p>
 <p>Use <code>excpt.getMessage()</code> to get error message.</p>
 <p>If an exception is thrown within a method and not caught within that method, then the method is immediately exited. </p>
 <ul>
@@ -127,11 +142,24 @@
 <p><strong>Object class</strong> will be the base class for classes that do not have a superclass.</p>
 <p><code>toString()</code> of Object class returns a String containing the <em>name</em> of the class of which the object is an instance of with the object’s hexadecimal <em>address</em> in memory.</p>
 <p><code>equals(otherObject)</code> of Object class returns whether two variables refer to a same object.</p>
+<p>Constructor in subclass will call <code>super()</code> first, which is different from orther regular methods.</p>
 <h3 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h3><p><strong>Polymorphism</strong> refers to determining which program behavior to execute depending on data types.</p>
 <ul>
 <li>Compile-time polymorphism: the compiler determines which of several identically-named methods to be called based on the method’s arguments</li>
 <li>Runtime polymorphism:  the determination is made when the program is running. E.g. a collection of objects of both base and derived class types</li>
 </ul>
+<p>Any object has two types associated with it. It has its display type and an implementation type.</p>
+<p><code>IntegerArrayBag a = new SafeIntegerArryBag();</code> Its type is IntegerArrayBag but it’s implemented as a SafeIntegerArrayBag. We can cast a IntegerArrayBag to SafeIntegerArrayBag.</p>
+<h3 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h3><p>An <strong>interface</strong> specifies a set of methods that an implementing class must override and define.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">pen</span> </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Any class that implements an interface must:</p>
+<ul>
+<li>List the interface name after the keyword <code>implements</code></li>
+<li>Override and implement the interface’s methods</li>
+</ul>
+<p>A class can implement multiple interfaces using a comma separated list although a class can only inherit from only one superclass.</p>
+<p>An interface cannot be instantiated.</p>
+<p>An interface contains method declarations, as opposed to method definitions.</p>
 ]]></content>
     
     <summary type="html">
