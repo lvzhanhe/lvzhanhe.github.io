@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/23/java1/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
 <meta property="og:description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic in">
-<meta property="og:updated_time" content="2018-02-26T20:06:21.580Z">
+<meta property="og:updated_time" content="2018-02-28T16:16:24.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Cheat Sheet (1)">
 <meta name="twitter:description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic in">
@@ -587,7 +587,7 @@
 <p>A sequence of instructions that solves a problem is called an <strong>algorithm</strong>.</p>
 <p>In a program, the cause of a problem is called a <strong>bug</strong>, and troubleshooting is called <strong>debugging</strong>.</p>
 <a id="more"></a>
-<p>Debugging methods:</p>
+<p>Debugging technics:</p>
 <ul>
 <li><em>Visual inspection</em></li>
 <li><em>Inserting debug output statements</em></li>
@@ -679,8 +679,8 @@
 <li><code>@return</code>: returned value or object of a method</li>
 <li><code>@see</code>: reference to orther source</li>
 </ul>
-<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><code>throws</code> Warning keyword. Goes in a method header. <code>public int myMethod throws NumberFormat Exception {</code> Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception ot also throws a new one.</p>
-<p><code>throw new</code> <code>throw new NumberFormatException();</code> Can use this to force code to crash rather than giving wrong answers.</p>
+<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><code>throws</code> Warning keyword. Goes in a method header. <code>public int myMethod throws NumberFormat Exception {</code> Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception or also throws it.</p>
+<p><code>throw new</code> <code>throw new NumberFormatException();</code> Statement that directly and immediately causes the specified exception. Can use this to force code to crash rather than giving wrong answers.</p>
 <p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks.</p>
 <p>Use <code>excpt.getMessage()</code> to get error message.</p>
 <p>If an exception is thrown within a method and not caught within that method, then the method is immediately exited. </p>
@@ -698,7 +698,7 @@
 <p><strong>Overriding</strong> differs from <strong>overloading</strong>. In overloading, methods with the same name must have different parameter types. In overriding, a derived class member method takes <em>precedence</em> over base class member method with the same name and parameter types. </p>
 <p>The annatation <code>@Override</code> is optional but helps the compiler detect errors better.</p>
 <p><strong>Object class</strong> will be the base class for classes that do not have a superclass.</p>
-<p><code>toString()</code> of Object class returns a String containing the <em>name</em> of the class of which the object is an instance of with the object’s hexadecimal <em>address</em> in memory.</p>
+<p><code>toString()</code> of Object class returns a String containing the <em>name</em> of the class of which the object is an instance of with the object’s hexadecimal <em>address</em> in memory (hashcode).</p>
 <p><code>equals(otherObject)</code> of Object class returns whether two variables refer to a same object.</p>
 <p>Constructor in subclass will call <code>super()</code> first, which is different from orther regular methods.</p>
 <h3 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h3><p><strong>Polymorphism</strong> refers to determining which program behavior to execute depending on data types.</p>
@@ -707,7 +707,7 @@
 <li>Runtime polymorphism:  the determination is made when the program is running. E.g. a collection of objects of both base and derived class types</li>
 </ul>
 <p>Any object has two types associated with it. It has its display type and an implementation type.</p>
-<p><code>IntegerArrayBag a = new SafeIntegerArryBag();</code> Its type is IntegerArrayBag but it’s implemented as a SafeIntegerArrayBag. We can cast a IntegerArrayBag to SafeIntegerArrayBag.</p>
+<p><code>IntegerArrayBag a = new SafeIntegerArryBag();</code> Its type is IntegerArrayBag but it’s implemented as a SafeIntegerArrayBag. </p>
 <h3 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h3><p>An <strong>interface</strong> specifies a set of methods that an implementing class must override and define.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">pen</span> </span>&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Any class that implements an interface must:</p>
@@ -718,6 +718,8 @@
 <p>A class can implement multiple interfaces using a comma separated list although a class can only inherit from only one superclass.</p>
 <p>An interface cannot be instantiated.</p>
 <p>An interface contains method declarations, as opposed to method definitions.</p>
+<p>Each of the primitive wrapper classes (e.g., Integer, Double) implements the Comparable interface, which declares the <code>compareTo()</code> method.</p>
+<p>Methods declared by an interface must be overridden and defined by the implementing class.</p>
 
       
     </div>
