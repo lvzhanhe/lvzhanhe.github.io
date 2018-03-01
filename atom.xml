@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-28T16:16:24.732Z</updated>
+  <updated>2018-03-01T21:12:35.393Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,71 @@
   
   <entry>
     <title>Java Cheat Sheet (1)</title>
+    <link href="http://yoursite.com/2018/03/01/java2/"/>
+    <id>http://yoursite.com/2018/03/01/java2/</id>
+    <published>2018-03-01T20:54:59.675Z</published>
+    <updated>2018-03-01T21:12:35.393Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>throws</code> Warning keyword. Goes in a method header. <code>public int myMethod throws NumberFormat Exception {</code> Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception or also throws it.</p>
+<p><code>throw new</code> <code>throw new NumberFormatException();</code> Statement that directly and immediately causes the specified exception. Can use this to force code to crash rather than giving wrong answers.</p>
+<a id="more"></a>
+<hr>
+<p>In the following case, input <code>8 9</code>, sum will not always be <code>17</code> because the first input may read input than needed:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">    </div><div class="line">   <span class="keyword">return</span> scnr.nextInt();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> sum = readInt() + readInt();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><code>this</code>:</p>
+<ul>
+<li>passing itself to another method <code>method(this);</code></li>
+<li><code>this.x = x;</code></li>
+<li><code>this(1,1,0);</code> or <code>this();</code>. Can only be used in the first line of a constructor.</li>
+<li>Can be used in either a constructor or a method</li>
+</ul>
+<p><code>super</code>:</p>
+<ul>
+<li>Can be used in either a constructor or a method</li>
+<li><code>super(1,1,0);</code> or <code>super();</code>. Can only be used in the first line of a constructor.</li>
+</ul>
+<hr>
+<p>Default constructor only exists when there is not any constructor defined.</p>
+<hr>
+<p>Non Access Modifier includes <code>static</code>, <code>final</code>, <code>abstract</code>. They cannot be used by constructors.</p>
+<p><code>final</code> cannot be inherited.</p>
+<p><code>static</code> method belongs to a Class. We can call it by <code>Class.staticMethod()</code> or <code>Object.staticMethod().</code></p>
+<p>Static methods can be inherited but cannot be overriden. It will not affect access rights.</p>
+<hr>
+<p><code>array.length</code> V.S. <code>ArrayList.size()</code></p>
+<hr>
+<p><code>out</code> is a static field in the System class</p>
+<hr>
+<p>In the try-catch-finally structure, <code>finally</code> will execute even no exception be caught.</p>
+<hr>
+<p><code>.equals()</code>:</p>
+<ul>
+<li>Object: whether same object</li>
+<li>Primitive wrapper class: if values are equal</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;throws&lt;/code&gt; Warning keyword. Goes in a method header. &lt;code&gt;public int myMethod throws NumberFormat Exception {&lt;/code&gt; Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception or also throws it.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;throw new&lt;/code&gt; &lt;code&gt;throw new NumberFormatException();&lt;/code&gt; Statement that directly and immediately causes the specified exception. Can use this to force code to crash rather than giving wrong answers.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zyBooks Notes C1-C5</title>
     <link href="http://yoursite.com/2018/02/23/java1/"/>
     <id>http://yoursite.com/2018/02/23/java1/</id>
     <published>2018-02-24T02:29:04.614Z</published>
-    <updated>2018-02-28T16:16:24.732Z</updated>
+    <updated>2018-03-01T21:00:43.174Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Some parts are paraphrased from <a href="http://www.zybooks.com/" target="_blank" rel="external">zyBooks</a> whose copywrite belong to the original writer. </p>
@@ -37,8 +98,6 @@
 </ul>
 <h3 id="Scanner"><a href="#Scanner" class="headerlink" title="Scanner"></a>Scanner</h3><p>If a method needs to read user input, a good practice is to create a single Scanner object in <code>main()</code> and pass that Scanner object to the method. </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readWord</span><span class="params">(Scanner scnr)</span> </span>&#123;</div><div class="line">   String word = scnr.next();</div><div class="line">   <span class="comment">// Do something with the word</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">   readWord(scnr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>In the following case, input <code>8 9</code>, sum will not always be <code>17</code> because the first input may read input than needed:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">    </div><div class="line">   <span class="keyword">return</span> scnr.nextInt();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> sum = readInt() + readInt();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>Principles of Object-Oriented Programing: abstraction, encapsulation, modularity.</p>
 <p>In a program, an <strong>object</strong> consists of some <em>internal data items</em> plus <em>operations</em> that can be performed on that data.</p>
 <p>A reference refers to an object and may be thought of as storing the memory address of an object. Variables of a class data type (and array types) are <em>reference variables</em>.</p>
@@ -121,9 +180,7 @@
 <li><code>@return</code>: returned value or object of a method</li>
 <li><code>@see</code>: reference to orther source</li>
 </ul>
-<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><code>throws</code> Warning keyword. Goes in a method header. <code>public int myMethod throws NumberFormat Exception {</code> Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception or also throws it.</p>
-<p><code>throw new</code> <code>throw new NumberFormatException();</code> Statement that directly and immediately causes the specified exception. Can use this to force code to crash rather than giving wrong answers.</p>
-<p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks.</p>
+<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks (will execute even if no exception be catched).</p>
 <p>Use <code>excpt.getMessage()</code> to get error message.</p>
 <p>If an exception is thrown within a method and not caught within that method, then the method is immediately exited. </p>
 <ul>
@@ -319,9 +376,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
@@ -423,9 +480,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   

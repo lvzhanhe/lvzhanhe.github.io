@@ -98,13 +98,13 @@
 <meta name="description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic in">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Cheat Sheet (1)">
+<meta property="og:title" content="zyBooks Notes C1-C5">
 <meta property="og:url" content="http://yoursite.com/2018/02/23/java1/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
 <meta property="og:description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic in">
-<meta property="og:updated_time" content="2018-02-28T16:16:24.732Z">
+<meta property="og:updated_time" content="2018-03-01T21:00:43.174Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Cheat Sheet (1)">
+<meta name="twitter:title" content="zyBooks Notes C1-C5">
 <meta name="twitter:description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   Computer programA computer program consists of instructions (aka statements) executing one at a time. Basic in">
 
 
@@ -139,7 +139,7 @@
 
 
 
-  <title>Java Cheat Sheet (1) | Zhanhe's BLOG</title>
+  <title>zyBooks Notes C1-C5 | Zhanhe's BLOG</title>
   
 
 
@@ -495,7 +495,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java Cheat Sheet (1)</h1>
+          <h1 class="post-title" itemprop="name headline">zyBooks Notes C1-C5</h1>
         
 
         <div class="post-meta">
@@ -595,8 +595,6 @@
 </ul>
 <h3 id="Scanner"><a href="#Scanner" class="headerlink" title="Scanner"></a>Scanner</h3><p>If a method needs to read user input, a good practice is to create a single Scanner object in <code>main()</code> and pass that Scanner object to the method. </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readWord</span><span class="params">(Scanner scnr)</span> </span>&#123;</div><div class="line">   String word = scnr.next();</div><div class="line">   <span class="comment">// Do something with the word</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">   readWord(scnr);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>In the following case, input <code>8 9</code>, sum will not always be <code>17</code> because the first input may read input than needed:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readInt</span><span class="params">()</span> </span>&#123;</div><div class="line">   Scanner scnr = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">    </div><div class="line">   <span class="keyword">return</span> scnr.nextInt();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</div><div class="line">   <span class="keyword">int</span> sum = readInt() + readInt();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h3><p>Principles of Object-Oriented Programing: abstraction, encapsulation, modularity.</p>
 <p>In a program, an <strong>object</strong> consists of some <em>internal data items</em> plus <em>operations</em> that can be performed on that data.</p>
 <p>A reference refers to an object and may be thought of as storing the memory address of an object. Variables of a class data type (and array types) are <em>reference variables</em>.</p>
@@ -679,9 +677,7 @@
 <li><code>@return</code>: returned value or object of a method</li>
 <li><code>@see</code>: reference to orther source</li>
 </ul>
-<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><code>throws</code> Warning keyword. Goes in a method header. <code>public int myMethod throws NumberFormat Exception {</code> Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception or also throws it.</p>
-<p><code>throw new</code> <code>throw new NumberFormatException();</code> Statement that directly and immediately causes the specified exception. Can use this to force code to crash rather than giving wrong answers.</p>
-<p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks.</p>
+<h3 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h3><p><strong>try</strong> block exits immediately when a <strong>throw</strong> statement executes. <strong>finally</strong> follows all catch blocks (will execute even if no exception be catched).</p>
 <p>Use <code>excpt.getMessage()</code> to get error message.</p>
 <p>If an exception is thrown within a method and not caught within that method, then the method is immediately exited. </p>
 <ul>
@@ -772,6 +768,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/03/01/java2/" rel="prev" title="Java Cheat Sheet (1)">
+                Java Cheat Sheet (1) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -856,7 +856,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1106,7 +1106,7 @@
         var disqus_config = function () {
           this.page.url = 'http://yoursite.com/2018/02/23/java1/';
           this.page.identifier = '2018/02/23/java1/';
-          this.page.title = 'Java Cheat Sheet (1)';
+          this.page.title = 'zyBooks Notes C1-C5';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://zhanheblog.disqus.com/embed.js';
