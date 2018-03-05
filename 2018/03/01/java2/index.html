@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,Notes,Exam," />
+  <meta name="keywords" content="Java,Exam,Notes," />
 
 
 
@@ -96,13 +96,13 @@
 
 
 <meta name="description" content="throws Warning keyword. Goes in a method header. public int myMethod throws NumberFormat Exception { Method might cause an exception of the specified type and then not handle it. Anyone who uses this">
-<meta name="keywords" content="Java,Notes,Exam">
+<meta name="keywords" content="Java,Exam,Notes">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Cheat Sheet (1)">
 <meta property="og:url" content="http://yoursite.com/2018/03/01/java2/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
 <meta property="og:description" content="throws Warning keyword. Goes in a method header. public int myMethod throws NumberFormat Exception { Method might cause an exception of the specified type and then not handle it. Anyone who uses this">
-<meta property="og:updated_time" content="2018-03-01T21:16:12.395Z">
+<meta property="og:updated_time" content="2018-03-05T19:46:36.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Cheat Sheet (1)">
 <meta name="twitter:description" content="throws Warning keyword. Goes in a method header. public int myMethod throws NumberFormat Exception { Method might cause an exception of the specified type and then not handle it. Anyone who uses this">
@@ -618,6 +618,14 @@
 <li>Object: whether same object</li>
 <li>Primitive wrapper class: if values are equal</li>
 </ul>
+<hr>
+<p>When a NullPointerException is thron from the following line of code, how many different reference could be the cause?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String x = person.friends[<span class="number">3</span>].name[<span class="number">2</span>];</div></pre></td></tr></table></figure>
+<p>Answer: 4. Possible cause: <code>person</code>, <code>person.friends</code>, <code>person.friends[3]</code>, <code>person.friends[3].name</code>. If <code>person.friends[3].name[2]</code> is null, x will be null too, no exception.</p>
+<hr>
+<p>What does the following code print out whe it is run?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sheep</span></span>&#123;</div><div class="line">    <span class="keyword">protected</span> String name = <span class="string">""</span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Sheep</span><span class="params">()</span></span>&#123;name = <span class="string">"Billy"</span>&#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Sheep</span><span class="params">(String name)</span></span>&#123;<span class="keyword">this</span>.name = name;&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lamb</span> <span class="keyword">extends</span> <span class="title">Sheep</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Lamb</span><span class="params">(String name)</span></span>&#123;</div><div class="line">        String output = <span class="keyword">this</span>.name + <span class="string">"Jr."</span>;</div><div class="line">        System.out.println(output);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="keyword">new</span> Lamb(<span class="string">"Larry"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Answer: Billy Jr. Implictly call <code>super()</code> in the begining of Lamb constructor.</p>
 
       
     </div>
@@ -649,9 +657,9 @@
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/Notes/" rel="tag"># Notes</a>
-          
             <a href="/tags/Exam/" rel="tag"># Exam</a>
+          
+            <a href="/tags/Notes/" rel="tag"># Notes</a>
           
         </div>
       
