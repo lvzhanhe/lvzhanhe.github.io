@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Intro to Comp Engineering Cheat Sheet (2)]]></title>
+    <url>%2F2018%2F03%2F05%2Fece2%2F</url>
+    <content type="text"><![CDATA[Two types of MOS transistors: When n-type transistor is supplied with 2.9 volts, the connection from source to drain acts like a piece of wire. We have a closed circuit between the source and drain. When the gate of the n-type transistor is supplied with 0 volts, the connection is broken. We have an open circuit. p-type 2.9 v -&gt; open circuit, 0 v -&gt; closed circuit ​ n-type: p-type: Logical Gates: XOR: $\overline{A}B+A\overline{B}=(A+B)(\overline{AB})$ $P+Q\overline{P}=P+Q$]]></content>
+      <categories>
+        <category>Computer Engineering</category>
+      </categories>
+      <tags>
+        <tag>Computer Engineering</tag>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Intro to Comp Engineering Cheat Sheet (1)]]></title>
     <url>%2F2018%2F03%2F05%2Fece1%2F</url>
     <content type="text"><![CDATA[Natural language: ambiguity Three characters of algorithms: Definiteness: each step is precisely stated Effective computability: each step can be carried out by computer Finiteness: the procedure terminates Two kinds of programming languages: high-level languages low-level languages (assemblylanguage) ISA (instruction set architecture) ISA specifies the set of instructions the computer can carryout (operations + dada values) Operand:individual data values in the operation Data types:legitimate representation for an operand such that the computer can performoperations on that representation. Addressing modes:mechanisms that the computer can use to figure out where the operands arelocated Number of unique locations in memory Number of bits for each location in memory Microarchitecture The detailed organization of an implementation Logic circuit Implement each element of the microarchitecture Unsigned integers With $k$ bits, we can represent in this positional notationexactly $2^k$ integers, ranging from $0$ to $2^k-1$. Signed integers With $k$ bits, we can represent in this positional notationexactly $2^k-1$integers, ranging from $-(2^{k-1}-1)$ to $2^{k-1}-1$. 1’s complement With $k$ bits, we can represent in this positional notationexactly $2^k-1$integers, ranging from $-(2^{k-1}-1)$ to $2^{k-1}-1$. 2’s complement With $k$ bits, we can represent in this positional notationexactly $2^k$integers, ranging from $-2^{k-1}$ to $2^{k-1}-1$. Overflow: Signs of operands are same, sign of sum is different Sign extension: It is performed in order to be able to operate on bitpatterns of different lengths. It does not affect the values of the numbersbeing represented. Logical operations: AND, OR, XOR, NOT]]></content>
@@ -82,8 +94,8 @@
       </categories>
       <tags>
         <tag>Terminal</tag>
-        <tag>Linux</tag>
         <tag>Unix</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -108,8 +120,8 @@
       </categories>
       <tags>
         <tag>Terminal</tag>
-        <tag>Linux</tag>
         <tag>Unix</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

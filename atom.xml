@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T02:44:26.375Z</updated>
+  <updated>2018-03-06T05:08:00.498Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intro to Comp Engineering Cheat Sheet (2)</title>
+    <link href="http://yoursite.com/2018/03/05/ece2/"/>
+    <id>http://yoursite.com/2018/03/05/ece2/</id>
+    <published>2018-03-06T03:20:21.987Z</published>
+    <updated>2018-03-06T05:08:00.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>Two types of MOS transistors: </p>
+<ul>
+<li>When <strong>n-type transistor</strong> is supplied with <strong>2.9 volts</strong>, the connection from source to drain acts like a piece of wire. We have a <strong>closed circuit</strong> between the source and drain. When the gate of the n-type transistor is supplied with <strong>0 volts</strong>, the connection is broken. We have an <strong>open circuit</strong>.</li>
+<li><strong>p-type</strong> 2.9 v -&gt; open circuit, 0 v -&gt; closed circuit</li>
+</ul>
+<a id="more"></a>
+<p>​        n-type:<img src="../images/ntype.png" style="zoom:50%" align="left/">            p-type: <img src="../images/ptype.png" style="zoom:50%" align="left/"></p>
+<p><strong>Logical Gates</strong>: </p>
+<p><img src="../images/gates.png" style="zoom:50%" align="left/"></p>
+<p><strong>XOR</strong>: $\overline{A}B+A\overline{B}=(A+B)(\overline{AB})$ </p>
+<p>$P+Q\overline{P}=P+Q$ </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Two types of MOS transistors: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When &lt;strong&gt;n-type transistor&lt;/strong&gt; is supplied with &lt;strong&gt;2.9 volts&lt;/strong&gt;, the connection from source to drain acts like a piece of wire. We have a &lt;strong&gt;closed circuit&lt;/strong&gt; between the source and drain. When the gate of the n-type transistor is supplied with &lt;strong&gt;0 volts&lt;/strong&gt;, the connection is broken. We have an &lt;strong&gt;open circuit&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;p-type&lt;/strong&gt; 2.9 v -&amp;gt; open circuit, 0 v -&amp;gt; closed circuit&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Computer Engineering" scheme="http://yoursite.com/categories/Computer-Engineering/"/>
+    
+    
+      <category term="Computer Engineering" scheme="http://yoursite.com/tags/Computer-Engineering/"/>
+    
+      <category term="Notes" scheme="http://yoursite.com/tags/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>Intro to Comp Engineering Cheat Sheet (1)</title>
@@ -460,9 +499,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
@@ -564,9 +603,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
