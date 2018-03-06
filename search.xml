@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Intro to Comp Engineering Cheat Sheet (2)]]></title>
     <url>%2F2018%2F03%2F05%2Fece2%2F</url>
-    <content type="text"><![CDATA[Two types of MOS transistors: When n-type transistor is supplied with 2.9 volts, the connection from source to drain acts like a piece of wire. We have a closed circuit between the source and drain. When the gate of the n-type transistor is supplied with 0 volts, the connection is broken. We have an open circuit. p-type 2.9 v -&gt; open circuit, 0 v -&gt; closed circuit ​ n-type: p-type: Logical Gates: XOR: $\overline{A}B+A\overline{B}=(A+B)(\overline{AB})$ $P+Q\overline{P}=P+Q$]]></content>
+    <content type="text"><![CDATA[Two types of MOS transistors: When n-type transistor is supplied with 2.9 volts, the connection from source to drain acts like a piece of wire. We have a closed circuit between the source and drain. When the gate of the n-type transistor is supplied with 0 volts, the connection is broken. We have an open circuit. p-type 2.9 v -&gt; open circuit, 0 v -&gt; closed circuit ​ n-type: p-type: Logical Gates: XOR: $\overline{A}B+A\overline{B}=(A+B)(\overline{AB})$ $P+Q\overline{P}=P+Q$ Decoder:]]></content>
       <categories>
         <category>Computer Engineering</category>
       </categories>
@@ -94,8 +94,8 @@
       </categories>
       <tags>
         <tag>Terminal</tag>
-        <tag>Unix</tag>
         <tag>Linux</tag>
+        <tag>Unix</tag>
       </tags>
   </entry>
   <entry>
@@ -120,8 +120,8 @@
       </categories>
       <tags>
         <tag>Terminal</tag>
-        <tag>Unix</tag>
         <tag>Linux</tag>
+        <tag>Unix</tag>
       </tags>
   </entry>
   <entry>

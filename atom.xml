@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T05:08:00.498Z</updated>
+  <updated>2018-03-06T16:48:03.651Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/03/05/ece2/"/>
     <id>http://yoursite.com/2018/03/05/ece2/</id>
     <published>2018-03-06T03:20:21.987Z</published>
-    <updated>2018-03-06T05:08:00.498Z</updated>
+    <updated>2018-03-06T16:48:03.651Z</updated>
     
     <content type="html"><![CDATA[<p>Two types of MOS transistors: </p>
 <ul>
@@ -33,6 +33,8 @@
 <p><img src="../images/gates.png" style="zoom:50%" align="left/"></p>
 <p><strong>XOR</strong>: $\overline{A}B+A\overline{B}=(A+B)(\overline{AB})$ </p>
 <p>$P+Q\overline{P}=P+Q$ </p>
+<hr>
+<p><strong>Decoder</strong>: </p>
 ]]></content>
     
     <summary type="html">
@@ -499,9 +501,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
-    
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
     
   </entry>
   
@@ -603,9 +605,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
-    
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
     
   </entry>
   
