@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-05T20:37:07.243Z</updated>
+  <updated>2018-03-06T02:40:28.626Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intro to Comp Engineering Cheat Sheet (1)</title>
+    <link href="http://yoursite.com/2018/03/05/ece1/"/>
+    <id>http://yoursite.com/2018/03/05/ece1/</id>
+    <published>2018-03-06T02:11:57.800Z</published>
+    <updated>2018-03-06T02:40:28.626Z</updated>
+    
+    <content type="html"><![CDATA[<p>Natural language: ambiguity</p>
+<p>Three characters of algorithms:</p>
+<ul>
+<li>Definiteness: each step is precisely stated</li>
+<li>Effective computability: each step can be carried out by computer</li>
+<li>Finiteness: the procedure terminates</li>
+</ul>
+<p>Two kinds of programming languages: </p>
+<ul>
+<li>high-level languages</li>
+<li>low-level languages (assemblylanguage)</li>
+</ul>
+<hr>
+<p>ISA (instruction set architecture)</p>
+<p>ISA specifies the set of instructions the computer can carryout (operations + dada values)</p>
+<p><strong>Operand:</strong>individual data values in the operation</p>
+<p><strong>Data types:</strong>legitimate representation for an operand such that the computer can performoperations on that representation.</p>
+<p><strong>Addressing modes:</strong>mechanisms that the computer can use to figure out where the operands arelocated</p>
+<p><strong>Number of unique locations in memory</strong></p>
+<p><strong>Number of bits for each location in memory</strong></p>
+<hr>
+<p>Microarchitecture</p>
+<p>The detailed organization of an implementation</p>
+<p>Logic circuit</p>
+<p>Implement each element of the microarchitecture</p>
+<hr>
+<p><strong>Unsigned integers</strong></p>
+<p>With $k$ bits, we can represent in this positional notationexactly $2^k$ integers, ranging from $0$ to $2^k-1$. </p>
+<p><strong>Signed integers</strong></p>
+<p>With $k$ bits, we can represent in this positional notationexactly $2^k-1$integers, ranging from $-(2^{k-1}-1)$ to $2^{k-1}-1$. </p>
+<p><strong>1’s complement</strong></p>
+<p>With $k$ bits, we can represent in this positional notationexactly $2^k-1$integers, ranging from $-(2^{k-1}-1)$ to $2^{k-1}-1$. </p>
+<p><strong>2’s complement</strong></p>
+<p>With $k$ bits, we can represent in this positional notationexactly $2^k$integers, ranging from $-2^{k-1}$ to $2^{k-1}-1$. </p>
+<hr>
+<p><strong>Overflow</strong>: Signs of operands are same, sign of sum is different</p>
+<p><strong>Sign extension</strong>: It is performed in order to be able to operate on bitpatterns of different lengths. It does not affect the values of the numbersbeing represented.</p>
+<hr>
+<p><strong>Logical operations</strong>: AND, OR, XOR, NOT</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Natural language: ambiguity&lt;/p&gt;
+&lt;p&gt;Three characters of algorithms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Definiteness: each step is precisely stated&lt;/li&gt;
+&lt;li&gt;Effe
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Notes" scheme="http://yoursite.com/tags/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>Java Cheat Sheet (1)</title>
@@ -82,9 +149,9 @@
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
-      <category term="Exam" scheme="http://yoursite.com/tags/Exam/"/>
-    
       <category term="Notes" scheme="http://yoursite.com/tags/Notes/"/>
+    
+      <category term="Exam" scheme="http://yoursite.com/tags/Exam/"/>
     
   </entry>
   

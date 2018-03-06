@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Intro to Comp Engineering Cheat Sheet (1)]]></title>
+    <url>%2F2018%2F03%2F05%2Fece1%2F</url>
+    <content type="text"><![CDATA[Natural language: ambiguity Three characters of algorithms: Definiteness: each step is precisely stated Effective computability: each step can be carried out by computer Finiteness: the procedure terminates Two kinds of programming languages: high-level languages low-level languages (assemblylanguage) ISA (instruction set architecture) ISA specifies the set of instructions the computer can carryout (operations + dada values) Operand:individual data values in the operation Data types:legitimate representation for an operand such that the computer can performoperations on that representation. Addressing modes:mechanisms that the computer can use to figure out where the operands arelocated Number of unique locations in memory Number of bits for each location in memory Microarchitecture The detailed organization of an implementation Logic circuit Implement each element of the microarchitecture Unsigned integers With $k$ bits, we can represent in this positional notationexactly $2^k$ integers, ranging from $0$ to $2^k-1$. Signed integers With $k$ bits, we can represent in this positional notationexactly $2^k-1$integers, ranging from $-(2^{k-1}-1)$ to $2^{k-1}-1$. 1’s complement With $k$ bits, we can represent in this positional notationexactly $2^k-1$integers, ranging from $-(2^{k-1}-1)$ to $2^{k-1}-1$. 2’s complement With $k$ bits, we can represent in this positional notationexactly $2^k$integers, ranging from $-2^{k-1}$ to $2^{k-1}-1$. Overflow: Signs of operands are same, sign of sum is different Sign extension: It is performed in order to be able to operate on bitpatterns of different lengths. It does not affect the values of the numbersbeing represented. Logical operations: AND, OR, XOR, NOT]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java Cheat Sheet (1)]]></title>
     <url>%2F2018%2F03%2F01%2Fjava2%2F</url>
     <content type="text"><![CDATA[throws Warning keyword. Goes in a method header. public int myMethod throws NumberFormat Exception { Method might cause an exception of the specified type and then not handle it. Anyone who uses this code must either handle the exception or also throws it. throw new throw new NumberFormatException(); Statement that directly and immediately causes the specified exception. Can use this to force code to crash rather than giving wrong answers. In the following case, input 8 9, sum will not always be 17 because the first input may read input than needed: 12345678public static int readInt() &#123; Scanner scnr = new Scanner(System.in); return scnr.nextInt();&#125;public static void main(String [] args) &#123; int sum = readInt() + readInt();&#125; this: passing itself to another method method(this); this.x = x; this(1,1,0); or this();. Can only be used in the first line of a constructor. Can be used in either a constructor or a method super: Can be used in either a constructor or a method super(1,1,0); or super();. Can only be used in the first line of a constructor. Default constructor only exists when there is not any constructor defined. Non Access Modifier includes static, final, abstract. They cannot be used by constructors. final cannot be inherited. static method belongs to a Class. We can call it by Class.staticMethod() or Object.staticMethod(). Static methods can be inherited but cannot be overriden. It will not affect access rights. array.length V.S. ArrayList.size() out is a static field in the System class In the try-catch-finally structure, finally will execute even no exception be caught. .equals(): Object: whether same object Primitive wrapper class: if values are equal When a NullPointerException is thron from the following line of code, how many different reference could be the cause? 1String x = professor.semester[3].course[2]; Answer: 4. Possible cause: professor, professor.semester, person.semester[3], professor.semester[3].course. If professor.semester[3].course[2] is null, x will be null too, no exception. What does the following code print out whe it is run? 1234567891011121314class Fish&#123; protected String name = ""; public Fish()&#123;name = "Billy"&#125; public Fish(String name)&#123;this.name = name;&#125;&#125;class Salmon extends Fish&#123; public Salmon(String name)&#123; String output = this.name + "Jr."; System.out.println(output); &#125; public static void main(String[] args)&#123; new Salmon("Larry"); &#125;&#125; Answer: Billy Jr. Implictly call super() in the begining of Salmon constructor.]]></content>
@@ -9,8 +21,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>Exam</tag>
         <tag>Notes</tag>
+        <tag>Exam</tag>
       </tags>
   </entry>
   <entry>
