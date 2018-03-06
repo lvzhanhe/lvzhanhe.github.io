@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T02:42:53.474Z</updated>
+  <updated>2018-03-06T02:44:26.375Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/03/05/ece1/"/>
     <id>http://yoursite.com/2018/03/05/ece1/</id>
     <published>2018-03-06T02:11:57.800Z</published>
-    <updated>2018-03-06T02:42:53.474Z</updated>
+    <updated>2018-03-06T02:44:26.375Z</updated>
     
     <content type="html"><![CDATA[<p>Natural language: ambiguity</p>
 <p>Three characters of algorithms:</p>
@@ -76,10 +76,10 @@
     
     </summary>
     
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+      <category term="Computer Engineering" scheme="http://yoursite.com/categories/Computer-Engineering/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+      <category term="Computer Engineering" scheme="http://yoursite.com/tags/Computer-Engineering/"/>
     
       <category term="Notes" scheme="http://yoursite.com/tags/Notes/"/>
     
@@ -150,9 +150,9 @@
       <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Notes" scheme="http://yoursite.com/tags/Notes/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Exam" scheme="http://yoursite.com/tags/Exam/"/>
     
@@ -317,9 +317,9 @@
       <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Notes" scheme="http://yoursite.com/tags/Notes/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
