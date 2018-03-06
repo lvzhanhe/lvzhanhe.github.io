@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T02:40:28.626Z</updated>
+  <updated>2018-03-06T02:42:53.474Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/03/05/ece1/"/>
     <id>http://yoursite.com/2018/03/05/ece1/</id>
     <published>2018-03-06T02:11:57.800Z</published>
-    <updated>2018-03-06T02:40:28.626Z</updated>
+    <updated>2018-03-06T02:42:53.474Z</updated>
     
     <content type="html"><![CDATA[<p>Natural language: ambiguity</p>
 <p>Three characters of algorithms:</p>
@@ -29,6 +29,7 @@
 <li>Effective computability: each step can be carried out by computer</li>
 <li>Finiteness: the procedure terminates</li>
 </ul>
+<a id="more"></a>
 <p>Two kinds of programming languages: </p>
 <ul>
 <li>high-level languages</li>
@@ -69,7 +70,9 @@
 &lt;p&gt;Three characters of algorithms:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Definiteness: each step is precisely stated&lt;/li&gt;
-&lt;li&gt;Effe
+&lt;li&gt;Effective computability: each step can be carried out by computer&lt;/li&gt;
+&lt;li&gt;Finiteness: the procedure terminates&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
