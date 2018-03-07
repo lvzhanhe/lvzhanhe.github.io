@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-06T16:48:03.651Z</updated>
+  <updated>2018-03-07T18:34:43.430Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/03/05/ece2/"/>
     <id>http://yoursite.com/2018/03/05/ece2/</id>
     <published>2018-03-06T03:20:21.987Z</published>
-    <updated>2018-03-06T16:48:03.651Z</updated>
+    <updated>2018-03-07T18:34:43.430Z</updated>
     
     <content type="html"><![CDATA[<p>Two types of MOS transistors: </p>
 <ul>
@@ -28,13 +28,104 @@
 <li><strong>p-type</strong> 2.9 v -&gt; open circuit, 0 v -&gt; closed circuit</li>
 </ul>
 <a id="more"></a>
-<p>​        n-type:<img src="../images/ntype.png" style="zoom:50%" align="left/">            p-type: <img src="../images/ptype.png" style="zoom:50%" align="left/"></p>
-<p><strong>Logical Gates</strong>: </p>
-<p><img src="../images/gates.png" style="zoom:50%" align="left/"></p>
+<p><strong>Logical Gates</strong>: AND, NAND, OR, NOR, Inverter</p>
 <p><strong>XOR</strong>: $\overline{A}B+A\overline{B}=(A+B)(\overline{AB})$ </p>
 <p>$P+Q\overline{P}=P+Q$ </p>
 <hr>
-<p><strong>Decoder</strong>: </p>
+<p><strong>Decoder</strong>: $n$ inputs, $2^n$ outputs </p>
+<p>For each of the four possible combinations of inputs A and B, exactly one output has the value 1 at any one time.</p>
+<p>Use: Seven segment display</p>
+<p><strong>Mux</strong>: $2^n$ inputs, $n$ select lines</p>
+<p>Use: select</p>
+<p><strong>Full Adder</strong>: Add two bits and carry-in, produce one-bit sum and carry-out.</p>
+<hr>
+<p>Combinational vs. Sequential</p>
+<p>Combinational circuit: always gives the same output for a given set of inputs</p>
+<p>Sequential circuit: output depends on stored information (state) plus input</p>
+<p><strong>R-S Latch</strong></p>
+<ul>
+<li>R = S = 1: hold current value in latch</li>
+<li>S = 0, R=1: set value to 1 (R)</li>
+<li>S = 1, R=0: set value to 0 (S)</li>
+<li>R = S = 0: both outputs equal one <em>Don’t do it!</em></li>
+</ul>
+<p><strong>Gated D-Latch</strong></p>
+<ul>
+<li>when WE (write enable) = 1, latch is set to value of D (data).</li>
+<li>when WE = 0, atch holds previous value.</li>
+</ul>
+<p><strong>Register</strong></p>
+<p>When WE=1, n-bit value D is written to register.</p>
+<hr>
+<p><strong>Memory</strong></p>
+<p>Address Space: number of locations (usually a power of 2)</p>
+<p>Addressability: number of bits per location</p>
+<p>Accesses of memory require decoding the address bits.</p>
+<hr>
+<p>The <strong>state</strong> of a system is a snapshot of all the relevant elements of the system at the moment the snapshot is taken.</p>
+<p><strong>Finite State Machine</strong>: A finite number of states, external inputs, external outputs, An explicit specification of all state transitions and hat causes each external output value.</p>
+<p>The mechanism that triggers the transition from one state to the next is a <strong>clock circuit</strong>.</p>
+<p>The <strong>data path</strong> of a computer is all the logic used to process information.</p>
+<p><strong>Combinational Logic</strong></p>
+<ul>
+<li>Decoders — convert instructions into control signals</li>
+<li>Multiplexers — select inputs and outputs</li>
+<li>ALU (Arithmetic and Logic Unit) — operations on data</li>
+</ul>
+<p><strong>Sequential Logic</strong></p>
+<ul>
+<li>State machine — coordinate control signals and data movement</li>
+<li>Registers and latches — storage elements</li>
+</ul>
+<hr>
+<p><strong>Von Neumann Model</strong>, a basic computer model</p>
+<p>Five parts: </p>
+<ul>
+<li><p>memory — contains computer programs</p>
+<p>Basic operations: read and load</p>
+<p>To read a location:</p>
+<ul>
+<li>Write the address into the MAR (memory’s address register).</li>
+<li>Send a “read” signal to the memory.</li>
+<li>Read the data from MDR (memory’s data register).</li>
+</ul>
+<p>To write value to a location:</p>
+<ul>
+<li>Write the data to the MDR.</li>
+<li>Write the address into the MAR.</li>
+<li>Send a “write” signal to the memory.</li>
+</ul>
+</li>
+<li><p>processing unit — carry out actual processing of information</p>
+<p>functional units: e.g. ALU = Arithmetic and Logic Unit</p>
+<p>word length: size of quantities processed by ALU</p>
+<p>registers: small, temporary storage</p>
+</li>
+<li><p>input and output</p>
+<p>Devices for getting data into and out of computer memory.</p>
+<p>Each device has different interface.</p>
+<p>Program that controls access to a device is usually called a driver.</p>
+</li>
+</ul>
+<ul>
+<li>control unit — control the order of carry out of the instructions</li>
+</ul>
+<hr>
+<p><strong>Instruction</strong></p>
+<p>Instructions specifies <strong>opcode</strong> and <strong>operands</strong>.</p>
+<p>A computer’s instructions and their formats is known as its <strong>Instruction Set Architecture</strong> (ISA).</p>
+<p>Instruction processing:</p>
+<ul>
+<li>Fetch — Load next instructions from memory into instruction registers.</li>
+<li>Decode — First identify the opcode. Then operands according to opcode.</li>
+<li>Evaluate Address — Compute address used for access.</li>
+<li>Fetch operands — Obtain operands.</li>
+<li>Execute — Perform the operation.</li>
+<li>Store — Write results to destination.</li>
+</ul>
+<p>Control unit will repeat instruction processing sequence as long as clock is running.</p>
+<p>The <strong>clock</strong> is a signal that keeps the control unit moving.</p>
+<p>To stop the computer: <code>AND</code> the clock generator signal with <code>ZERO</code>.</p>
 ]]></content>
     
     <summary type="html">
