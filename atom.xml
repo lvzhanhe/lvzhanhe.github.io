@@ -592,9 +592,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
@@ -696,9 +696,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
