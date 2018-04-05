@@ -478,6 +478,231 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/24/java3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhanhe Lyu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhanhe's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/24/java3/" itemprop="url">zyBooks Notes C6-C10</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-24T22:30:56-05:00">
+                2018-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/24/java3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/03/24/java3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Some parts are paraphrased from <a href="http://www.zybooks.com/" target="_blank" rel="external">zyBooks</a> whose copywrite belong to the original writer. </p>
+</blockquote>
+<h3 id="Generics"><a href="#Generics" class="headerlink" title="Generics"></a>Generics</h3><p>A <strong>generic method</strong> is a method definition having a special type parameter that may be used in place of types in the method. </p>
+<p>A <strong>generic class</strong> is a method definition having a special type parameter that may be used in place of types in the class.</p>
+<p><strong>Type arguments</strong> can only be <strong>reference types</strong>.  If a primitive type is desired, it should be boxed into a corresponding <strong>primitive wrapper class</strong>. </p>
+<p>A type parameter may be associated with a <strong>type bound</strong> to specify the class types for which a type parameter is valid. For instance, <code>&lt;Type extends Comparable&lt;Type&gt;&gt;</code>.</p>
+<p>A generic method / class may have multiple parameters:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">modifiers &lt;Type1 extends BoundType1, Type2 extends BoundType2&gt; </div><div class="line"><span class="function">ReturnType <span class="title">methodName</span><span class="params">(parameters)</span> </span>&#123; </div><div class="line">   ... </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Perfect-size-array"><a href="#Perfect-size-array" class="headerlink" title="Perfect size array"></a>Perfect size array</h3><p>A <strong>perfect size array</strong> is an array where the number of elements is exactly equal to the memory allocated.</p>
+<p>A perfect size array can be created by initializing each element in the array to given values. </p>
+<p>E.g.,  <code>int[] studentIDs = {93, 80, 62, 75, 74, 89, 97};</code>.</p>
+<p>A perfect sized array is used when the size of the array will not change throughout the program.</p>
+<p>A new array should be constructed if number of elements in it need to be changed.</p>
+<h3 id="Oversized-array"><a href="#Oversized-array" class="headerlink" title="Oversized array"></a>Oversized array</h3><p>An <strong>oversize array</strong> is an array where the number of elements in the array is less than or equal to the memory allocated.</p>
+<p>Oversize arrays are good choices when the number of elements in the array will change over time.</p>
+<p>Oversize arrays typically use three variables: array reference, current size, and a constant for the array capacity.</p>
+<p>When oversize arrays are passed to a method, array reference and the current size are needed. Besides, an oversize array cannot be returned by a method.</p>
+<p>Methods updating oversize arrays (do not forget to update the size of array after modifications)</p>
+<ul>
+<li>Adding elements</li>
+<li>Removing elements</li>
+</ul>
+<h3 id="Linked-List"><a href="#Linked-List" class="headerlink" title="Linked List"></a>Linked List</h3><p>A <strong>data structure</strong> is way of organizing data, usually used to implement an abstract data type.</p>
+<p>The first node is called <strong>head</strong>. The last node is called <strong>tail</strong>.</p>
+<p>A <strong>list traversal</strong> algorithm visits all nodes in the list and performs some operation on each node.</p>
+<p>A <strong>search</strong> algorithm returns the first node whose data matches that key, or returns null if a matching node was not found.</p>
+<p><strong>Common methods</strong>:</p>
+<ul>
+<li><code>get(index)</code> </li>
+<li><code>set(index, newElement)</code> </li>
+<li><code>add(newElement)</code>, <code>add(index, newElement)</code></li>
+<li><code>size()</code> </li>
+<li><code>remove(index)</code>, <code>remove(existingElement)</code></li>
+</ul>
+<h3 id="O-notation"><a href="#O-notation" class="headerlink" title="O notation"></a>O notation</h3><p><strong>Big O notation</strong> is a mathematical way to describe the relationship between running time of an algorithm and the input size.</p>
+<p>Constant, Logarithmic, Linear, Log-linear, Quadratic, Exponential.</p>
+<p>Algorithm runtime analysis often focuses on the worst-case runtime complexity.</p>
+<h3 id="Stack-and-Queue"><a href="#Stack-and-Queue" class="headerlink" title="Stack and Queue"></a>Stack and Queue</h3><p>A <strong>stack</strong> is an ADT in which items are only inserted on or removed from the top of a stack.</p>
+<p>A <strong>queue</strong> is an ADT in which items are inserted at the end of the queue and removed from the front of the queue.</p>
+<h3 id="ListIterator"><a href="#ListIterator" class="headerlink" title="ListIterator"></a>ListIterator</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.ListIterator;</div><div class="line">LinkedList&lt;String&gt; studentsList = <span class="keyword">new</span> LinkedList&lt;String&gt;();</div><div class="line">ListIterator&lt;String&gt; listIterator = studentssList.listIterator();</div><div class="line">String studentName;</div><div class="line"></div><div class="line"><span class="keyword">while</span> (listIterator.hasNext()) &#123;       </div><div class="line"> studentName = listIterator.next();  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Common methods</strong>:</p>
+<ul>
+<li><code>next()</code></li>
+<li><code>nextIndex()</code></li>
+<li><code>previous()</code></li>
+<li><code>previousIndex()</code></li>
+<li><code>hasNext()</code></li>
+<li><code>hasPrevious()</code></li>
+<li><code>add(newElement)</code> Inserts a newElement between the next and previous elements and moves the ListIterator after the newElement.</li>
+<li><code>remove()</code> Removes the element returned by the prior call to next() or previous().</li>
+<li><code>set(newElement)</code> Cannot call set() immediately after add() or remove(). Replaces the element returned by the prior call next() or previous() with newElement.</li>
+</ul>
+<h3 id="Recursion"><a href="#Recursion" class="headerlink" title="Recursion"></a>Recursion</h3><p>A <strong>recursive method</strong> is a method that calls itself.</p>
+<p>A recursive method should have at least a base case and a recursive case.</p>
+<p>Use recursion to solve math problems:</p>
+<ul>
+<li>Fibonacci sequence</li>
+<li>Greatest common divisor</li>
+</ul>
+<p>Each method call places a new <strong>stack frame</strong> on the stack. Deep recursion could fill the stack region and cause a <strong>stack overflow</strong>.</p>
+<h3 id="Searching-and-algorithms"><a href="#Searching-and-algorithms" class="headerlink" title="Searching and algorithms"></a>Searching and algorithms</h3><p><strong>Linear search</strong> starts from the beginning of a list, and checks each element one by one until the search key is found or the end of the list is reached.</p>
+<p><strong>Binary search</strong> is based on a sorted list. It checks the middle element of the search space until the search key is found ot the search space is empty. </p>
+<h3 id="Binary-tree"><a href="#Binary-tree" class="headerlink" title="Binary tree"></a>Binary tree</h3><p>Since “binary” means two, each node has up to two children.</p>
+<p>Some definitions:</p>
+<ul>
+<li><strong>Leaf</strong>: A tree node with no children.</li>
+<li><strong>Internal node</strong>: A node with at least one child.</li>
+<li><strong>Left child</strong></li>
+<li><strong>Right child</strong></li>
+<li><strong>Parent</strong></li>
+<li><strong>Ancestor</strong></li>
+<li><strong>Root</strong>: The top node. The one that does not have parent.</li>
+<li><strong>Edge</strong>: The link from a node to its child.</li>
+<li><strong>Depth</strong>: The number of edges from the root to the node.</li>
+<li><strong>Level</strong>: All nodes with the same depth form a tree level. All nodes with depth 1 form level 1.</li>
+<li><strong>Height</strong>: The largest depth of any node. A tree with just one node has height 0.</li>
+</ul>
+<p>A <strong>max-heap</strong> is a binary tree that maintains the simple property that a node’s key is greater than or equal to its childrens’ keys.</p>
+<p>An <strong>insert</strong> into a max-heap starts by inserting the node in the tree’s lowest level, and then keeps swapping the node with its parent until no max-heap property violation occurs.</p>
+<p>A <strong>remove</strong> from a max-heap replaces the node with the last level’s last node, and  keeps swapping that node with its greatest child until no max-heap property violation occurs.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/ece2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1830,157 +2055,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/18/command1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhanhe Lyu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhanhe's BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/18/command1/" itemprop="url">Basic Unix Commands (1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-18T23:12:31-05:00">
-                2017-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Terminal/" itemprop="url" rel="index">
-                    <span itemprop="name">Terminal</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/07/18/command1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/07/18/command1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Terminal provides a command line interface to control the UNIX-based operating system. Here’s something important you need to know about Terminal, and what it can do for you.</p>
-<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p><code>pwd</code> is short for “print working directory”. It outputs the path of your current working directory. If you get lost, <code>pwd</code> can tell you where you are.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~ pwd</div><div class="line">/Users/LyuZhanhe</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/18/command1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2031,7 +2105,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
