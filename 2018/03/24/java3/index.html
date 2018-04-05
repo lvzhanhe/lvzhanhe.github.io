@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/24/java3/index.html">
 <meta property="og:site_name" content="Zhanhe&#39;s BLOG">
 <meta property="og:description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   GenericsA generic method is a method definition having a special type parameter that may be used in place of t">
-<meta property="og:updated_time" content="2018-03-29T02:25:04.315Z">
+<meta property="og:updated_time" content="2018-04-05T03:00:03.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zyBooks Notes C6-C10">
 <meta name="twitter:description" content="Some parts are paraphrased from zyBooks whose copywrite belong to the original writer.   GenericsA generic method is a method definition having a special type parameter that may be used in place of t">
@@ -586,6 +586,7 @@
 <h3 id="Generics"><a href="#Generics" class="headerlink" title="Generics"></a>Generics</h3><p>A <strong>generic method</strong> is a method definition having a special type parameter that may be used in place of types in the method. </p>
 <p>A <strong>generic class</strong> is a method definition having a special type parameter that may be used in place of types in the class.</p>
 <p><strong>Type arguments</strong> can only be <strong>reference types</strong>.  If a primitive type is desired, it should be boxed into a corresponding <strong>primitive wrapper class</strong>. </p>
+<a id="more"></a>
 <p>A type parameter may be associated with a <strong>type bound</strong> to specify the class types for which a type parameter is valid. For instance, <code>&lt;Type extends Comparable&lt;Type&gt;&gt;</code>.</p>
 <p>A generic method / class may have multiple parameters:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">modifiers &lt;Type1 extends BoundType1, Type2 extends BoundType2&gt; </div><div class="line"><span class="function">ReturnType <span class="title">methodName</span><span class="params">(parameters)</span> </span>&#123; </div><div class="line">   ... </div><div class="line">&#125;</div></pre></td></tr></table></figure>

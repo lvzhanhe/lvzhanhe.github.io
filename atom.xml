@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-29T02:25:04.315Z</updated>
+  <updated>2018-04-05T03:00:03.734Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2018/03/24/java3/"/>
     <id>http://yoursite.com/2018/03/24/java3/</id>
     <published>2018-03-25T03:30:56.998Z</published>
-    <updated>2018-03-29T02:25:04.315Z</updated>
+    <updated>2018-04-05T03:00:03.734Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Some parts are paraphrased from <a href="http://www.zybooks.com/" target="_blank" rel="external">zyBooks</a> whose copywrite belong to the original writer. </p>
@@ -28,6 +28,7 @@
 <h3 id="Generics"><a href="#Generics" class="headerlink" title="Generics"></a>Generics</h3><p>A <strong>generic method</strong> is a method definition having a special type parameter that may be used in place of types in the method. </p>
 <p>A <strong>generic class</strong> is a method definition having a special type parameter that may be used in place of types in the class.</p>
 <p><strong>Type arguments</strong> can only be <strong>reference types</strong>.  If a primitive type is desired, it should be boxed into a corresponding <strong>primitive wrapper class</strong>. </p>
+<a id="more"></a>
 <p>A type parameter may be associated with a <strong>type bound</strong> to specify the class types for which a type parameter is valid. For instance, <code>&lt;Type extends Comparable&lt;Type&gt;&gt;</code>.</p>
 <p>A generic method / class may have multiple parameters:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">modifiers &lt;Type1 extends BoundType1, Type2 extends BoundType2&gt; </div><div class="line"><span class="function">ReturnType <span class="title">methodName</span><span class="params">(parameters)</span> </span>&#123; </div><div class="line">   ... </div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -108,7 +109,11 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;Some parts are paraphrased from &lt;a href=&quot;http://www.zybooks.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zyBooks&lt;/a&gt; whose copywrite
+&lt;p&gt;Some parts are paraphrased from &lt;a href=&quot;http://www.zybooks.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zyBooks&lt;/a&gt; whose copywrite belong to the original writer. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;Generics&quot;&gt;&lt;a href=&quot;#Generics&quot; class=&quot;headerlink&quot; title=&quot;Generics&quot;&gt;&lt;/a&gt;Generics&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;generic method&lt;/strong&gt; is a method definition having a special type parameter that may be used in place of types in the method. &lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;generic class&lt;/strong&gt; is a method definition having a special type parameter that may be used in place of types in the class.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Type arguments&lt;/strong&gt; can only be &lt;strong&gt;reference types&lt;/strong&gt;.  If a primitive type is desired, it should be boxed into a corresponding &lt;strong&gt;primitive wrapper class&lt;/strong&gt;. &lt;/p&gt;
     
     </summary>
     
@@ -698,9 +703,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
-    
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
     
   </entry>
   
@@ -802,9 +807,9 @@
     
       <category term="Terminal" scheme="http://yoursite.com/tags/Terminal/"/>
     
-      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
-    
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Unix" scheme="http://yoursite.com/tags/Unix/"/>
     
   </entry>
   
